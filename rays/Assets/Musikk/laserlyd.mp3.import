@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b54ysxen4cq2w"
-path="res://.godot/imported/laserlyd.mp3-d886e66d78c3e5e4432a3e48779d0ef0.mp3str"
+path="res://.godot/imported/laserlyd.mp3-f1f4f1ee55bdad5914a86b78f70f4e1b.mp3str"
 
 [deps]
 
-source_file="res://Musikk/laserlyd.mp3"
-dest_files=["res://.godot/imported/laserlyd.mp3-d886e66d78c3e5e4432a3e48779d0ef0.mp3str"]
+source_file="res://Assets/Musikk/laserlyd.mp3"
+dest_files=["res://.godot/imported/laserlyd.mp3-f1f4f1ee55bdad5914a86b78f70f4e1b.mp3str"]
 
 [params]
 

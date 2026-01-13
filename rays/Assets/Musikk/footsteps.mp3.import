@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://wd06vodxv6ox"
-path="res://.godot/imported/footsteps.mp3-e340a1b9b806f2f2ccdec31db9c4f86f.mp3str"
+path="res://.godot/imported/footsteps.mp3-b15e0cc68db9e0d56ba31a4e3f5a9fcd.mp3str"
 
 [deps]
 
-source_file="res://Musikk/footsteps.mp3"
-dest_files=["res://.godot/imported/footsteps.mp3-e340a1b9b806f2f2ccdec31db9c4f86f.mp3str"]
+source_file="res://Assets/Musikk/footsteps.mp3"
+dest_files=["res://.godot/imported/footsteps.mp3-b15e0cc68db9e0d56ba31a4e3f5a9fcd.mp3str"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://mrnoeyapxutg"
-path="res://.godot/imported/lasersomtreffer-speil.mp3-eb4e01c2ce97d6dd353b71b826fec2f1.mp3str"
+path="res://.godot/imported/lasersomtreffer-speil.mp3-1a11e3e60f4f63b27f64c62df254e5bf.mp3str"
 
 [deps]
 
-source_file="res://Musikk/lasersomtreffer-speil.mp3"
-dest_files=["res://.godot/imported/lasersomtreffer-speil.mp3-eb4e01c2ce97d6dd353b71b826fec2f1.mp3str"]
+source_file="res://Assets/Musikk/lasersomtreffer-speil.mp3"
+dest_files=["res://.godot/imported/lasersomtreffer-speil.mp3-1a11e3e60f4f63b27f64c62df254e5bf.mp3str"]
 
 [params]
 

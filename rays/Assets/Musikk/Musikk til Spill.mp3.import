@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cgkxpe4t7qwca"
-path="res://.godot/imported/Musikk til Spill.mp3-864deb7157fb498cc88a758ac7bceee6.mp3str"
+path="res://.godot/imported/Musikk til Spill.mp3-b8c7ddb5785a2d8038230616817c0fff.mp3str"
 
 [deps]
 
-source_file="res://Musikk/Musikk til Spill.mp3"
-dest_files=["res://.godot/imported/Musikk til Spill.mp3-864deb7157fb498cc88a758ac7bceee6.mp3str"]
+source_file="res://Assets/Musikk/Musikk til Spill.mp3"
+dest_files=["res://.godot/imported/Musikk til Spill.mp3-b8c7ddb5785a2d8038230616817c0fff.mp3str"]
 
 [params]
 
