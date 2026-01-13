@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cgkxpe4t7qwca"
+path="res://.godot/imported/Musikk til Spill.mp3-864deb7157fb498cc88a758ac7bceee6.mp3str"
+
+[deps]
+
+source_file="res://Musikk/Musikk til Spill.mp3"
+dest_files=["res://.godot/imported/Musikk til Spill.mp3-864deb7157fb498cc88a758ac7bceee6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
