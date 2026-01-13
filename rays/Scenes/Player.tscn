@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://1p2s8n6ibfjc"]
 
-[ext_resource type="Texture2D" uid="uid://0kgm2a60o7rq" path="res://icon.svg" id="1_rpqav"]
+[ext_resource type="Texture2D" uid="uid://0kgm2a60o7rq" path="res://Assets/Objects/icon.svg" id="1_rpqav"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kyqiw"]
 animations = [{
