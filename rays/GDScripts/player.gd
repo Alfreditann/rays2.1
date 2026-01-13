@@ -22,7 +22,7 @@ func read_input():
 		dir = Vector2.DOWN
 	elif Input.is_action_pressed("move_left") and !$left.is_colliding():
 		dir = Vector2.LEFT
-	elif Input.is_action_pressed("move_rigth") and !$right.is_colliding():
+	elif Input.is_action_pressed("move_right") and !$right.is_colliding():
 		dir = Vector2.RIGHT
 	
 	# Update last_dir when pressing movement keys
