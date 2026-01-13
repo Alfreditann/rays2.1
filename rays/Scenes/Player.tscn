@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://1p2s8n6ibfjc"]
+
+[ext_resource type="Texture2D" uid="uid://0kgm2a60o7rq" path="res://icon.svg" id="1_rpqav"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kyqiw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rpqav")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gntrk"]
+size = Vector2(116, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dewec"]
+size = Vector2(151, 151)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kyqiw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gntrk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, -3.5)
+shape = SubResource("RectangleShape2D_dewec")
+debug_color = Color(0.95168704, 8.663535e-07, 0.56485, 0.41960785)
+
+[node name="up" type="RayCast2D" parent="."]
+
+[node name="down" type="RayCast2D" parent="."]
+
+[node name="left" type="RayCast2D" parent="."]
+
+[node name="right" type="RayCast2D" parent="."]
