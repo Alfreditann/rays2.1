@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://dcai6x3ww052d"]
+[gd_scene load_steps=16 format=3 uid="uid://dcai6x3ww052d"]
 
 [ext_resource type="Texture2D" uid="uid://cdtqs3tsx2sgj" path="res://Assets/Sprites/pausemenu-rays.png" id="1_emv3i"]
+[ext_resource type="Script" uid="uid://x5dlbspw02r4" path="res://GDScripts/pause_menu.gd" id="1_k0w1u"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k0w1u"]
 texture = ExtResource("1_emv3i")
@@ -30,6 +31,7 @@ texture = ExtResource("1_emv3i")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0fi7f"]
 
 [node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_k0w1u")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 15
@@ -50,21 +52,25 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_1och7")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bpi0q")
 
 [node name="QuitToMainMenu" type="Button" parent="."]
-offset_left = 440.0
-offset_top = 132.0
-offset_right = 740.0
-offset_bottom = 238.0
+offset_left = 720.0
+offset_top = 330.0
+offset_right = 932.0
+offset_bottom = 412.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_vmyb1")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_myy0f")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_sjs17")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_u8tnp")
 
 [node name="Restart" type="Button" parent="."]
-offset_left = 722.0
-offset_top = 326.0
-offset_right = 920.0
-offset_bottom = 412.0
+offset_left = 446.0
+offset_top = 138.0
+offset_right = 734.0
+offset_bottom = 224.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_stj27")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ix48p")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_524vl")
 theme_override_styles/focus = SubResource("StyleBoxTexture_0fi7f")
+
+[connection signal="pressed" from="ReturnToGame" to="." method="_on_return_to_game_pressed"]
+[connection signal="pressed" from="QuitToMainMenu" to="." method="_on_quit_to_main_menu_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
