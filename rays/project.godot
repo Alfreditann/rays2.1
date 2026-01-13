@@ -14,6 +14,11 @@ config/name="Rays"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Assets/Objects/icon.svg"
 
+[display]
+
+window/size/mode=3
+window/stretch/mode="viewport"
+
 [input]
 
 move_up={
