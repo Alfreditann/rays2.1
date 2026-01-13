@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqvpduyg04iqq"]
+
+[ext_resource type="VideoStream" uid="uid://ki7ss5drxhv" path="res://Assets/Animations/Tower-long.ogv" id="1_hs38m"]
+[ext_resource type="Script" uid="uid://bxeiykheh3dcs" path="res://GDScripts/win_animation.gd" id="1_qe5j4"]
+
+[node name="WinAnimation" type="Node2D"]
+position = Vector2(542, 300)
+script = ExtResource("1_qe5j4")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+offset_left = -2384.0
+offset_top = -1364.0
+offset_right = 2430.0
+offset_bottom = 1342.0
+stream = ExtResource("1_hs38m")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(17, -15)
+zoom = Vector2(0.244, 0.244)
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
