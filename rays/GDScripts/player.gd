@@ -8,11 +8,23 @@ var target_pos: Vector2
 var moving := false
 var last_dir := Vector2.DOWN # default facing down
 
-func _physics_process(delta: float) -> void:
+var laser = preload("res://Scenes/laser.tscn")
+
+var instance = laser.instantiate()
+
+
+func _physics_process(_delta: float) -> void:
 	if not moving:
 		read_input()
+		
+	if Input.is_action_just_pressed("action_1"):
+		print("should do")
+		add_child(instance)
 
 func read_input():
+	
+	
+	
 	var dir := Vector2.ZERO
 	
 	# Tile-based movement input + collision check
@@ -58,7 +70,7 @@ func read_input():
 			Vector2.LEFT:
 				anim.play("Left_idle")
 			Vector2.RIGHT:
-				anim.play("Rigth_idle")
+				anim.play("Right_idle")
 
 func start_move(dir: Vector2):
 	moving = true
