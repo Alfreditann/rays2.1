@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyw65cbt2k1x3"]
+
+[ext_resource type="Script" uid="uid://dr8kcxklqv1po" path="res://GDScripts/last_monster.gd" id="1_820rp"]
+[ext_resource type="Texture2D" uid="uid://cr1mrywa2db85" path="res://Assets/Sprites/Monster.png" id="2_ja3l6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ujuxu"]
+radius = 19.026299
+
+[node name="LastMonster" type="StaticBody2D"]
+script = ExtResource("1_820rp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ja3l6")
+
+[node name="LastMonster" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LastMonster"]
+rotation = 1.5707964
+shape = SubResource("CircleShape2D_ujuxu")
+
+[connection signal="area_entered" from="LastMonster" to="." method="_on_monster_area_entered"]
+[connection signal="area_entered" from="LastMonster" to="." method="_on_last_monster_area_entered"]
+[connection signal="body_entered" from="LastMonster" to="." method="_on_monster_body_entered"]
+[connection signal="body_entered" from="LastMonster" to="." method="_on_last_monster_body_entered"]
