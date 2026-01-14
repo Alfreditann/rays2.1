@@ -1,15 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://2ut6ymjrct3k"]
+[gd_scene load_steps=10 format=3 uid="uid://2ut6ymjrct3k"]
 
 [ext_resource type="Script" uid="uid://d35pss3etuopi" path="res://GDScripts/win_screen.gd" id="1_awi1s"]
 [ext_resource type="Texture2D" uid="uid://cpikebhbgg5d3" path="res://Assets/Sprites/mainmenu-rays.png" id="1_l5sol"]
 [ext_resource type="FontFile" uid="uid://d0earjg3lblmr" path="res://Assets/Fonts/pixelmax/Pixelmax-Regular.otf" id="3_bwc64"]
-[ext_resource type="PackedScene" uid="uid://dqvpduyg04iqq" path="res://Scenes/win_animation.tscn" id="4_bwc64"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a00f1"]
 texture = ExtResource("1_l5sol")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l5sol"]
-bg_color = Color(0.37464148, 0.6535661, 0.6765846, 1)
+bg_color = Color(0.21028152, 0.70819396, 0.3813733, 1)
 corner_radius_top_left = 45
 corner_radius_top_right = 45
 corner_radius_bottom_right = 45
@@ -59,6 +58,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_a00f1")
 
 [node name="Label" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = -69.0
 offset_top = -746.0
@@ -70,7 +70,53 @@ theme_override_font_sizes/font_size = 100
 text = "Took you long enough, 
 alright atleast you won"
 
+[node name="Label2" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -69.0
+offset_top = -746.0
+offset_right = 1209.0
+offset_bottom = -530.0
+theme_override_colors/font_color = Color(0.450939, 0.5923324, 0.7217891, 1)
+theme_override_fonts/font = ExtResource("3_bwc64")
+theme_override_font_sizes/font_size = 100
+text = "Congrats You Did It!!!
+Be Aware Danger Ahead"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 60.0
+offset_right = 1042.0
+offset_bottom = 701.0
+theme_override_constants/separation = 100
+
+[node name="Menu" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_bwc64")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxFlat_l5sol")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a00f1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_awi1s")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_bwc64")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_85imr")
+text = "Next"
+
+[node name="QuitGame" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_bwc64")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/normal = SubResource("StyleBoxFlat_l5sol")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_a00f1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_awi1s")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_bwc64")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_85imr")
+text = "Quit"
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 4.0
 offset_top = 60.0
@@ -102,7 +148,11 @@ theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_bwc64")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_85imr")
 text = "Quit"
 
-[node name="WinAnimation" parent="." instance=ExtResource("4_bwc64")]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(548, 281)
+zoom = Vector2(0.244, 0.244)
 
+[connection signal="pressed" from="VBoxContainer2/Menu" to="." method="_on_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer2/QuitGame" to="." method="_on_quit_game_pressed"]
 [connection signal="pressed" from="VBoxContainer/Menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitGame" to="." method="_on_quit_game_pressed"]

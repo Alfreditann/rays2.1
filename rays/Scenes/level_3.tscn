@@ -1,8 +1,10 @@
-[gd_scene load_steps=12 format=4 uid="uid://c0ppged0xdlif"]
+[gd_scene load_steps=14 format=4 uid="uid://c0ppged0xdlif"]
 
 [ext_resource type="Texture2D" uid="uid://hr5bbno1efxa" path="res://Assets/Map/Tileset.png" id="1_ng0s0"]
 [ext_resource type="PackedScene" uid="uid://dyw65cbt2k1x3" path="res://Scenes/last_monster.tscn" id="2_g5cw1"]
 [ext_resource type="PackedScene" uid="uid://cdh1fhu6i7en" path="res://Scenes/laser.tscn" id="3_76ybr"]
+[ext_resource type="PackedScene" uid="uid://dm3bykltx1cx2" path="res://Scenes/laser_test.tscn" id="4_s8nj6"]
+[ext_resource type="PackedScene" uid="uid://dcai6x3ww052d" path="res://Scenes/pause_menu.tscn" id="5_vwg62"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ffim"]
 texture = ExtResource("1_ng0s0")
@@ -347,4 +349,10 @@ tile_set = SubResource("TileSet_wrinw")
 position = Vector2(366, 173)
 
 [node name="laser" parent="." instance=ExtResource("3_76ybr")]
-position = Vector2(369, 176)
+position = Vector2(667, 180)
+
+[node name="laser_test" parent="." instance=ExtResource("4_s8nj6")]
+position = Vector2(617, 175)
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_vwg62")]
+visible = false
