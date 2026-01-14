@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://bp6pti71278u"]
+[gd_scene load_steps=7 format=4 uid="uid://bp6pti71278u"]
 
 [ext_resource type="Texture2D" uid="uid://hr5bbno1efxa" path="res://Assets/Map/Tileset.png" id="1_vk57k"]
+[ext_resource type="PackedScene" uid="uid://dcai6x3ww052d" path="res://Scenes/pause_menu.tscn" id="2_i63mn"]
+[ext_resource type="PackedScene" uid="uid://corcbrotvdfg2" path="res://Scenes/monster.tscn" id="3_nw7js"]
+[ext_resource type="PackedScene" uid="uid://cdh1fhu6i7en" path="res://Scenes/laser.tscn" id="4_nh7xm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ffim"]
 texture = ExtResource("1_vk57k")
@@ -110,3 +113,12 @@ tile_set = SubResource("TileSet_xfk5q")
 
 [node name="TileMapLayer4" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_xfk5q")
+
+[node name="Monster" parent="." instance=ExtResource("3_nw7js")]
+position = Vector2(659, 298)
+
+[node name="laser" parent="." instance=ExtResource("4_nh7xm")]
+position = Vector2(735, 300)
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_i63mn")]
+visible = false
