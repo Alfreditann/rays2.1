@@ -15,6 +15,10 @@ run/main_scene="uid://0hda1be71iiq"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Assets/Objects/icon.svg"
 
+[autoload]
+
+Global="*res://GDScripts/global.gd"
+
 [display]
 
 window/size/mode=3

@@ -17,5 +17,4 @@ func _on_back_pressed() -> void:
 
 
 func _on_volume_button_drag_ended(value_changed: bool) -> void:
-	Global.music = $Volume_button.value
-	print(Global.music)
+	pass
