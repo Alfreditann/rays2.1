@@ -21,7 +21,7 @@ func shoot():
 	
 	print("should do")
 	print("dir: ", dir)
-	#dprint("pos: ", position)
+	print("pos: ", position)
 
 
 func _physics_process(_delta: float) -> void:
@@ -32,9 +32,7 @@ func _physics_process(_delta: float) -> void:
 		shoot()
 
 func read_input():
-	
 	var dir := Vector2.ZERO
-	
 	# Tile-based movement input + collision check
 	if Input.is_action_pressed("move_up") and !$up.is_colliding():
 		dir = Vector2.UP

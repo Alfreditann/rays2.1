@@ -1,21 +1,32 @@
 [gd_scene load_steps=4 format=3 uid="uid://dbmyo5t0t7v7o"]
 
 [ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Map/mirror.png" id="1_85veo"]
-[ext_resource type="Script" uid="uid://2j3ery5gapde" path="res://GDScripts/pushable_mirror.gd" id="1_yulij"]
+[ext_resource type="PackedScene" uid="uid://1p2s8n6ibfjc" path="res://Scenes/Player.tscn" id="3_lmwj1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmwj1"]
 size = Vector2(28, 30)
 
 [node name="PushableMirror" type="RigidBody2D"]
-script = ExtResource("1_yulij")
+position = Vector2(308, 156)
+collision_layer = 2
+collision_mask = 2
+linear_damp = 20.0
+angular_damp = 20.0
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 top_level = true
+light_mask = 3
+visibility_layer = 3
+position = Vector2(307, 154)
 shape = SubResource("RectangleShape2D_lmwj1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -2)
 texture = ExtResource("1_85veo")
 region_enabled = true
 region_rect = Rect2(0, 0, 32, 31.5)
+
+[node name="player" parent="." instance=ExtResource("3_lmwj1")]
+position = Vector2(-65, -5)
+collision_layer = 2
+collision_mask = 2
