@@ -4,13 +4,24 @@ const tile_size: Vector2 = Vector2(32,32)
 
 @onready var anim = $AnimatedSprite2D
 
+var dir := Vector2.ZERO
+
 var target_pos: Vector2
 var moving := false
 var last_dir := Vector2.DOWN # default facing down
 
 var laser = preload("res://Scenes/laser.tscn")
+var inst = laser.instantiate()
 
-var instance = laser.instantiate()
+
+func shoot():
+	inst.dir = last_dir
+	
+	add_child(inst)
+	
+	print("should do")
+	print("dir: ", dir)
+	#dprint("pos: ", position)
 
 
 func _physics_process(_delta: float) -> void:
@@ -18,12 +29,9 @@ func _physics_process(_delta: float) -> void:
 		read_input()
 		
 	if Input.is_action_just_pressed("action_1"):
-		print("should do")
-		add_child(instance)
+		shoot()
 
 func read_input():
-	
-	
 	
 	var dir := Vector2.ZERO
 	
