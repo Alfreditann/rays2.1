@@ -15,12 +15,13 @@ var inst = laser.instantiate()
 
 
 func shoot():
+	
+	laser.queue_free()
+	
 	inst.dir = last_dir
 	
 	add_child(inst)
-	
-	print("should do")
-	print("dir: ", dir)
+	print("player dir: ", dir)
 	#dprint("pos: ", position)
 
 
