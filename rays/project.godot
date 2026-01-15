@@ -53,6 +53,10 @@ Escape={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="background"
+
 [physics]
 
 2d/default_gravity=0.0
