@@ -17,5 +17,5 @@ func _on_back_pressed() -> void:
 
 
 func _on_volume_button_drag_ended(value_changed: bool) -> void:
-	Global.music = $Volume_button.value
+	Global.music = $Volume_button.value #slidebar = volume
 	print(Global.music)
