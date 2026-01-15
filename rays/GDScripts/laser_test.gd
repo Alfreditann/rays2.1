@@ -28,6 +28,6 @@ func start_motion() -> void:
 
 
 func _on_laser_test_area_entered(area: Area2D) -> void:
-		# Prevent duplicate trigger if still colliding
+	# Prevent duplicate trigger if still colliding
 	if Time.get_ticks_msec() - last_hit_time < hit_delay * 1000:
 		return
