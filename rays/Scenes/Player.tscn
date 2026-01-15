@@ -183,17 +183,13 @@ shape = SubResource("RectangleShape2D_dewec")
 debug_color = Color(0.95168704, 8.663535e-07, 0.56485, 0.41960785)
 
 [node name="up" type="RayCast2D" parent="."]
-position = Vector2(0, -18)
-target_position = Vector2(0, -16)
+target_position = Vector2(0, -20)
 
 [node name="down" type="RayCast2D" parent="."]
-position = Vector2(0, 18)
-target_position = Vector2(0, 16)
+target_position = Vector2(0, 20)
 
 [node name="left" type="RayCast2D" parent="."]
-position = Vector2(-16, 0)
-target_position = Vector2(-16, 0)
+target_position = Vector2(-20, 0)
 
 [node name="right" type="RayCast2D" parent="."]
-position = Vector2(16, 0)
-target_position = Vector2(16, 0)
+target_position = Vector2(20, 0)

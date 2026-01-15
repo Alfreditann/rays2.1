@@ -1,0 +1,108 @@
+[gd_scene load_steps=10 format=3 uid="uid://rf57i1hgvnpl"]
+
+[ext_resource type="Texture2D" uid="uid://cpikebhbgg5d3" path="res://Assets/Sprites/mainmenu-rays.png" id="1_i44u3"]
+[ext_resource type="Script" uid="uid://rmwb27pi0wme" path="res://Scenes/settings.gd" id="1_lhmql"]
+[ext_resource type="FontFile" uid="uid://d0earjg3lblmr" path="res://Assets/Fonts/pixelmax/Pixelmax-Regular.otf" id="2_lhmql"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aaqfp"]
+texture = ExtResource("1_i44u3")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2dne"]
+bg_color = Color(0.3900625, 0.6848851, 0.3327297, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bismi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6kysc"]
+bg_color = Color(0.35109416, 0.61143124, 0.9184744, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6vr2p"]
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f60ng"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lhmql")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.5
+offset_top = -325.0
+offset_right = 577.5
+offset_bottom = 317.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_aaqfp")
+
+[node name="Volume_button" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 340.0
+offset_right = 700.0
+offset_bottom = 360.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -131.0
+offset_top = -74.0
+offset_right = 19.0
+offset_bottom = 161.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Volume" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.9184133, 0.4917817, 0.24503782, 1)
+theme_override_fonts/font = ExtResource("2_lhmql")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j2dne")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bismi")
+text = "Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.9184133, 0.4917817, 0.24503782, 1)
+theme_override_fonts/font = ExtResource("2_lhmql")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j2dne")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6kysc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6vr2p")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_f60ng")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bismi")
+text = "Back"
+
+[connection signal="drag_ended" from="Volume_button" to="." method="_on_volume_button_drag_ended"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
