@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://dm3bykltx1cx2"]
+
+[ext_resource type="Texture2D" uid="uid://t2qj11hrwmyc" path="res://Assets/Player/fireball(3).png" id="1_6km0w"]
+[ext_resource type="Script" uid="uid://jsag6lebkt30" path="res://GDScripts/laser_test.gd" id="1_t5kga"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6km0w"]
+size = Vector2(29, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1k6qa"]
+atlas = ExtResource("1_6km0w")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t5kga"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1k6qa")
+}],
+"loop": true,
+"name": &"Middle",
+"speed": 5.0
+}]
+
+[node name="laser_test" type="RigidBody2D"]
+script = ExtResource("1_t5kga")
+
+[node name="laser_test" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laser_test"]
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_6km0w")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 114.0
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t5kga")
+animation = &"Middle"
+frame_progress = 0.037985913
+
+[connection signal="area_entered" from="laser_test" to="." method="_on_laser_test_area_entered"]
