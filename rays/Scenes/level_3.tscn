@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://c0ppged0xdlif"]
+[gd_scene load_steps=16 format=4 uid="uid://c0ppged0xdlif"]
 
 [ext_resource type="Texture2D" uid="uid://hr5bbno1efxa" path="res://Assets/Map/Tileset.png" id="1_ng0s0"]
 [ext_resource type="PackedScene" uid="uid://dyw65cbt2k1x3" path="res://Scenes/last_monster.tscn" id="2_g5cw1"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dm3bykltx1cx2" path="res://Scenes/laser_test.tscn" id="4_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://dcai6x3ww052d" path="res://Scenes/pause_menu.tscn" id="5_vwg62"]
 [ext_resource type="PackedScene" uid="uid://1p2s8n6ibfjc" path="res://Scenes/Player.tscn" id="6_53xsp"]
+[ext_resource type="PackedScene" uid="uid://dbmyo5t0t7v7o" path="res://Scenes/pushable_mirror.tscn" id="7_53xsp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ffim"]
 texture = ExtResource("1_ng0s0")
@@ -422,8 +423,7 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_lsmp6"]
 tile_size = Vector2i(32, 32)
-physics_layer_0/collision_layer = 2
-physics_layer_0/collision_mask = 2
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_evi0p")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrdnt"]
@@ -495,3 +495,6 @@ visible = false
 
 [node name="player" parent="." instance=ExtResource("6_53xsp")]
 position = Vector2(368, 339)
+
+[node name="PushableMirror" parent="." instance=ExtResource("7_53xsp")]
+position = Vector2(564, 432)

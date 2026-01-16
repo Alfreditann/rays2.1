@@ -10,6 +10,8 @@ var target_pos: Vector2
 var moving := false
 var last_dir := Vector2.DOWN # default facing down
 
+var speed = 200.0
+
 var laser = preload("res://Scenes/laser.tscn")
 var inst = laser.instantiate()
 
@@ -105,4 +107,7 @@ func start_move(dir: Vector2):
 		global_position = target_pos
 		moving = false
 	)
-		
+	
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	#if area.name == "PushableArea":
+	pass

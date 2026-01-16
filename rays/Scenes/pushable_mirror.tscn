@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbmyo5t0t7v7o"]
+[gd_scene load_steps=4 format=3 uid="uid://dbmyo5t0t7v7o"]
 
 [ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Map/mirror.png" id="1_85veo"]
-[ext_resource type="Script" uid="uid://2j3ery5gapde" path="res://GDScripts/pushable_mirror.gd" id="1_yulij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmwj1"]
 size = Vector2(32, 30)
@@ -9,8 +8,10 @@ size = Vector2(32, 30)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_85veo"]
 size = Vector2(28, 28)
 
-[node name="PushableMirror" type="CharacterBody2D"]
-script = ExtResource("1_yulij")
+[node name="PushableMirror" type="RigidBody2D"]
+gravity_scale = 0.0
+linear_damp = 10.0
+angular_damp = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
@@ -30,13 +31,10 @@ region_rect = Rect2(0, 0, 32, 31.5)
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_85veo")
 
-[node name="up" type="RayCast2D" parent="."]
+[node name="Rayright" type="RayCast2D" parent="."]
+scale = Vector2(1.5, 1.5)
+target_position = Vector2(24, 0)
 
-[node name="down" type="RayCast2D" parent="."]
-
-[node name="left" type="RayCast2D" parent="."]
-
-[node name="right" type="RayCast2D" parent="."]
-
-[connection signal="body_entered" from="PushableArea" to="." method="_on_pushable_area_body_entered"]
-[connection signal="body_exited" from="PushableArea" to="." method="_on_pushable_area_body_exited"]
+[node name="Rayleft" type="RayCast2D" parent="."]
+scale = Vector2(1.5, 1.5)
+target_position = Vector2(-24, 0)
