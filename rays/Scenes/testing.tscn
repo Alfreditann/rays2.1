@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqv0r6unt7ymb"]
+
+[ext_resource type="PackedScene" uid="uid://1p2s8n6ibfjc" path="res://Scenes/Player.tscn" id="1_siu27"]
+[ext_resource type="PackedScene" uid="uid://dbmyo5t0t7v7o" path="res://Scenes/pushable_mirror.tscn" id="2_sx6hp"]
+
+[node name="Testing" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_siu27")]
+position = Vector2(239, 239)
+
+[node name="PushableMirror" parent="." instance=ExtResource("2_sx6hp")]
+position = Vector2(414, 246)

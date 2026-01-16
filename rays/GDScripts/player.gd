@@ -105,3 +105,4 @@ func start_move(dir: Vector2):
 		global_position = target_pos
 		moving = false
 	)
+		
