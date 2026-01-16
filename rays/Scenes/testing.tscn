@@ -5,7 +5,7 @@
 
 [node name="Testing" type="Node2D"]
 
-[node name="player" parent="." instance=ExtResource("1_siu27")]
+[node name="player" parent="." groups=["player"] instance=ExtResource("1_siu27")]
 position = Vector2(239, 239)
 
 [node name="PushableMirror" parent="." instance=ExtResource("2_sx6hp")]

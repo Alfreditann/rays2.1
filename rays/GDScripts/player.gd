@@ -53,7 +53,7 @@ func read_input():
 			dir = Vector2.LEFT
 	elif Input.is_action_pressed("move_right"):
 		$right.force_raycast_update()
-		if !$right.is_colliding():
+		if !$right.is_colliding():	
 			dir = Vector2.RIGHT
 	
 	# Update last_dir when pressing movement keys
