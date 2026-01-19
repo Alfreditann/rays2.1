@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://1loq1ea4g3us" path="res://GDScripts/pushable_mirror.gd" id="1_yulij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmwj1"]
-size = Vector2(28, 28)
+size = Vector2(34, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_85veo"]
 size = Vector2(28, 28)
@@ -12,7 +12,6 @@ size = Vector2(28, 28)
 [node name="PushableMirror" type="RigidBody2D"]
 collision_layer = 7
 collision_mask = 7
-gravity_scale = 0.0
 lock_rotation = true
 linear_damp = 10.0
 angular_damp = 10.0
@@ -21,8 +20,9 @@ script = ExtResource("1_yulij")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
 visibility_layer = 3
-position = Vector2(0, -2)
+position = Vector2(0, -14)
 shape = SubResource("RectangleShape2D_lmwj1")
+debug_color = Color(0.78801715, 0.27821654, 0.82138145, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1, -2)
