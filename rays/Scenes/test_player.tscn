@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0qigvbmteskf"]
+
+[ext_resource type="Texture2D" uid="uid://cau6m3mrepvux" path="res://Assets/Player/Player Character.png" id="1_khaq0"]
+[ext_resource type="Script" uid="uid://c3qslb2fh376q" path="res://GDScripts/test_player.gd" id="1_qkid2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkid2"]
+size = Vector2(25, 33)
+
+[node name="TestPlayer" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_qkid2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+top_level = true
+light_mask = 3
+visibility_layer = 3
+shape = SubResource("RectangleShape2D_qkid2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_khaq0")
+region_enabled = true
+region_rect = Rect2(0, 0, 31, 32.5)

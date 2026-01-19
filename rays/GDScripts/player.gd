@@ -11,18 +11,23 @@ var target_pos: Vector2
 var moving := false
 var last_dir := Vector2.DOWN # default facing down
 
+var speed = 200.0
+
 var laser = preload("res://Scenes/laser.tscn")
 var inst = laser.instantiate()
 
 
 func shoot():
+	
+	laser.queue_free()
+	
 	inst.dir = last_dir
 	
 	add_child(inst)
 	
 	print("should do")
 	print("dir: ", dir)
-	#dprint("pos: ", position)
+	print("pos: ", position)
 
 
 func _physics_process(_delta: float) -> void:
@@ -33,18 +38,24 @@ func _physics_process(_delta: float) -> void:
 		shoot()
 
 func read_input():
-	
 	var dir := Vector2.ZERO
-	
 	# Tile-based movement input + collision check
-	if Input.is_action_pressed("move_up") and !$up.is_colliding():
-		dir = Vector2.UP
-	elif Input.is_action_pressed("move_down") and !$down.is_colliding():
-		dir = Vector2.DOWN
-	elif Input.is_action_pressed("move_left") and !$left.is_colliding():
-		dir = Vector2.LEFT
-	elif Input.is_action_pressed("move_right") and !$right.is_colliding():
-		dir = Vector2.RIGHT
+	if Input.is_action_pressed("move_up"):
+		$up.force_raycast_update()
+		if !$up.is_colliding():
+			dir = Vector2.UP
+	elif Input.is_action_pressed("move_down"):
+		$down.force_raycast_update()
+		if !$down.is_colliding():
+			dir = Vector2.DOWN
+	elif Input.is_action_pressed("move_left"):
+		$left.force_raycast_update()
+		if !$left.is_colliding():
+			dir = Vector2.LEFT
+	elif Input.is_action_pressed("move_right"):
+		$right.force_raycast_update()
+		if !$right.is_colliding():	
+			dir = Vector2.RIGHT
 	
 	# Update last_dir when pressing movement keys
 	if dir != Vector2.ZERO:
@@ -97,3 +108,7 @@ func start_move(dir: Vector2):
 		global_position = target_pos
 		moving = false
 	)
+	
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	#if area.name == "PushableArea":
+	pass

@@ -20,5 +20,3 @@ shape = SubResource("CircleShape2D_ujuxu")
 
 [connection signal="area_entered" from="LastMonster" to="." method="_on_monster_area_entered"]
 [connection signal="area_entered" from="LastMonster" to="." method="_on_last_monster_area_entered"]
-[connection signal="body_entered" from="LastMonster" to="." method="_on_monster_body_entered"]
-[connection signal="body_entered" from="LastMonster" to="." method="_on_last_monster_body_entered"]
