@@ -6,6 +6,7 @@ const tile_size: Vector2 = Vector2(32,32)
 
 var dir := Vector2.ZERO
 
+
 var target_pos: Vector2
 var moving := false
 var last_dir := Vector2.DOWN # default facing down
