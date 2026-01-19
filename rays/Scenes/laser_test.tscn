@@ -37,6 +37,6 @@ autostart = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_t5kga")
 animation = &"Middle"
-frame_progress = 0.037985913
+frame_progress = 0.8161275
 
 [connection signal="area_entered" from="laser_test" to="." method="_on_laser_test_area_entered"]

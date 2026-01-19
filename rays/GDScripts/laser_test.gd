@@ -1,14 +1,11 @@
 extends RigidBody2D
 
 
-var speed := 130
+var speed := 70
 var last_hit_time := 0.0
 var hit_delay := 0.2 # prevents multiple triggers per frame
 var rect_shape1 = 0
 @onready var anim = $AnimatedSprite2D
-
-
-
 
 func _ready():	
 	linear_velocity = -global_transform.x * speed

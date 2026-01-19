@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://bp6pti71278u"]
+[gd_scene load_steps=9 format=4 uid="uid://c1foiscoesav6"]
 
 [ext_resource type="Texture2D" uid="uid://hr5bbno1efxa" path="res://Assets/Map/Tileset.png" id="1_vk57k"]
 [ext_resource type="PackedScene" uid="uid://dcai6x3ww052d" path="res://Scenes/pause_menu.tscn" id="2_i63mn"]
@@ -169,4 +169,4 @@ visible = false
 position = Vector2(527, 303)
 
 [node name="laser_test" parent="." instance=ExtResource("6_evi0p")]
-position = Vector2(834, 355)
+position = Vector2(773, 301)
