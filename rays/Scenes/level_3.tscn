@@ -497,4 +497,4 @@ visible = false
 position = Vector2(368, 339)
 
 [node name="PushableMirror" parent="." instance=ExtResource("7_53xsp")]
-position = Vector2(543, 348)
+position = Vector2(562, 432)

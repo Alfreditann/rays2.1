@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbmyo5t0t7v7o"]
+[gd_scene load_steps=6 format=3 uid="uid://dbmyo5t0t7v7o"]
 
 [ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Map/mirror.png" id="1_85veo"]
 [ext_resource type="Script" uid="uid://1loq1ea4g3us" path="res://GDScripts/pushable_mirror.gd" id="1_yulij"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yulij"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmwj1"]
 size = Vector2(34, 10)
@@ -12,6 +14,7 @@ size = Vector2(28, 28)
 [node name="PushableMirror" type="RigidBody2D"]
 collision_layer = 7
 collision_mask = 7
+physics_material_override = SubResource("PhysicsMaterial_yulij")
 lock_rotation = true
 linear_damp = 10.0
 angular_damp = 10.0
