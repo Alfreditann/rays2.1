@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1517aq33cyx5"]
+
+[ext_resource type="Texture2D" uid="uid://hr5bbno1efxa" path="res://Assets/Map/Tileset.png" id="1_ejx3s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8o1l4"]
+size = Vector2(28, 28.5)
+
+[node name="Block" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ejx3s")
+region_enabled = true
+region_rect = Rect2(97.5, 128.75, 28, 29.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.25)
+rotation = -1.5707964
+shape = SubResource("RectangleShape2D_8o1l4")
+one_way_collision = true
