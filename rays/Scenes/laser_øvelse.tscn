@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_abnuk"]
 size = Vector2(32, 8)
 
-[node name="laser_øvelse" type="CharacterBody2D"]
+[node name="laser_øvelse" type="RigidBody2D"]
 script = ExtResource("1_r6msl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

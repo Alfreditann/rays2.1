@@ -4,6 +4,10 @@ const tile_size: Vector2 = Vector2(32,32)
 
 @onready var anim = $AnimatedSprite2D
 
+var laser = preload("res://Scenes/laser_øvelse.tscn")
+var pos = Vector2.ZERO
+var is_ready: bool = true
+
 var dir := Vector2.ZERO
 
 
@@ -13,12 +17,26 @@ var last_dir := Vector2.DOWN # default facing down
 
 var speed = 200.0
 
-var laser = preload("res://Scenes/laser.tscn")
+var laser2 = preload("res://Scenes/laser.tscn")
 var inst = laser.instantiate()
+
 
 
 func shoot():
 	
+	if Input.is_action_just_pressed("move_left") || Input.is_action_just_pressed("ui_left"):
+		pos = Vector2(-1,0)
+	elif Input.is_action_just_pressed("move_right") || Input.is_action_just_pressed("ui_right"):
+		pos = Vector2(1,0)
+	elif Input.is_action_just_pressed("move_up") || Input.is_action_just_pressed("ui_up"):
+		pos = Vector2(0,-1)
+	elif Input.is_action_just_pressed("move_down") || Input.is_action_just_pressed("ui_down"):
+		pos = Vector2(0,1)
+		
+	var instance = laser2.instantiate()
+	
+	var muzzle_offset = 16  # tweak to taste (in pixels)
+	instance.global_position = global_position + pos * muzzle_offset
 	laser.queue_free()
 	
 	inst.dir = last_dir
