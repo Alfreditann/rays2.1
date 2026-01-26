@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2b5bmiyplfrm"]
+
+[ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Map/mirror.png" id="1_2gpgd"]
+[ext_resource type="Script" uid="uid://b2hwjfwtk40eb" path="res://GDScripts/normal_mirror.gd" id="1_8w0w2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0w2"]
+size = Vector2(11, 31)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnj3j"]
+size = Vector2(3, 26)
+
+[node name="Normal_Mirror" type="StaticBody2D"]
+script = ExtResource("1_8w0w2")
+
+[node name="KillLaser" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_8w0w2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2gpgd")
+region_enabled = true
+region_rect = Rect2(12, 96.465996, 12.5, 32.12847)
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(3.5, -1)
+shape = SubResource("RectangleShape2D_fnj3j")
+debug_color = Color(0.8905607, 0.14936134, 0.7096971, 0.41960785)
