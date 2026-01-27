@@ -10,7 +10,6 @@ var dir: Vector2
 
 func _ready():
 	linear_velocity = -global_transform.x * speed
-	$laser_test.area_entered.connect(_on_laser_test_area_entered)
 
 	
 	$Timer.wait_time = 0.3
@@ -22,7 +21,6 @@ func _ready():
 	# Make sure the body isn't sleeping when we set velocity
 	sleeping = false
 	linear_velocity = Vector2.LEFT.rotated(rotation) * speed
-	$laser_test.area_entered.connect(_on_laser_test_area_entered)
 	
 	gravity_scale = 0
 	lock_rotation = true   # Godot 4 property; if Godot 3 use 'freeze' or 'can_sleep' settings accordingly
