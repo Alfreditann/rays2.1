@@ -7,6 +7,7 @@
 size = Vector2(32, 8)
 
 [node name="laser_øvelse" type="CharacterBody2D"]
+slide_on_ceiling = false
 script = ExtResource("1_r6msl")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -14,5 +15,10 @@ texture = ExtResource("1_abnuk")
 region_enabled = true
 region_rect = Rect2(0, 43.75, 32, 9)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="laser" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laser"]
 shape = SubResource("RectangleShape2D_abnuk")
+
+[connection signal="area_entered" from="laser" to="." method="_on_laser_area_entered"]
+[connection signal="body_entered" from="laser" to="." method="_on_laser_body_entered"]
