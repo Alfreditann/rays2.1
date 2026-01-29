@@ -32,8 +32,12 @@ func start_motion() -> void:
 func _on_laser_test_area_entered(area: Area2D) -> void:
 	if area.name == "speil_hitbox":
 		linear_velocity = Vector2.RIGHT * speed
+		anim.play("Middle")
 		print("Hit")
-	#if area.name == "hurtbox":
-		#queue_free()
+	elif area.name == "speil_hitbox2":
+		linear_velocity = Vector2.UP * speed
+		anim.play("up")
+	if area.name == "hurtbox":
+		queue_free()
 	if area.name == "monster":
 		queue_free()

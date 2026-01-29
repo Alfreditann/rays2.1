@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://c0ppged0xdlif"]
+[gd_scene load_steps=19 format=4 uid="uid://c0ppged0xdlif"]
 
 [ext_resource type="Texture2D" uid="uid://hr5bbno1efxa" path="res://Assets/Map/Tileset.png" id="1_ng0s0"]
 [ext_resource type="PackedScene" uid="uid://dyw65cbt2k1x3" path="res://Scenes/last_monster.tscn" id="2_g5cw1"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dbmyo5t0t7v7o" path="res://Scenes/pushable_mirror.tscn" id="7_53xsp"]
 [ext_resource type="PackedScene" uid="uid://b2b5bmiyplfrm" path="res://Scenes/normal_mirror.tscn" id="8_5e78q"]
 [ext_resource type="PackedScene" uid="uid://csv25sku6un2f" path="res://Scenes/laser_øvelse.tscn" id="9_l4wr6"]
+[ext_resource type="PackedScene" uid="uid://diobar4pe2vyp" path="res://Scenes/normal_mirror_2.tscn" id="10_5rvg2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ffim"]
 texture = ExtResource("1_ng0s0")
@@ -511,3 +512,6 @@ position = Vector2(506, 340)
 
 [node name="laser_øvelse" parent="." instance=ExtResource("9_l4wr6")]
 position = Vector2(625, 343)
+
+[node name="Normal_Mirror2" parent="." instance=ExtResource("10_5rvg2")]
+position = Vector2(618, 338)
