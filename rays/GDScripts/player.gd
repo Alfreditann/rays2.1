@@ -17,7 +17,11 @@ var last_dir := Vector2.DOWN # default facing down
 
 var speed = 200.0
 
-
+func shoot():
+	var laser_instance = laser.instantiate()
+	laser_instance.global_position = global_position
+	laser_instance.dir = last_dir
+	get_tree().current_scene.add_child(laser_instance) 
 func _physics_process(_delta: float) -> void:
 	if not moving:
 		read_input()
@@ -79,12 +83,6 @@ func read_input():
 				anim.play("Left_idle")
 			Vector2.RIGHT:
 				anim.play("Right_idle")
-
-func shoot():
-
-	print("should do")
-	print("dir: ", dir)
-	print("pos: ", position)
 func start_move(dir: Vector2):
 	moving = true
 	target_pos = global_position + dir * tile_size

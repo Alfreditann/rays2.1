@@ -19,6 +19,10 @@ func _ready():
 	# Make sure the body isn't sleeping when we set velocity
 	sleeping = false
 	linear_velocity = Vector2.LEFT.rotated(rotation) * speed
+	
+	if dir != Vector2.ZERO:
+		linear_velocity = dir.normalized() * speed
+		rotation = dir.angle()
 func start_motion() -> void:
 	# Compute velocity from the current rotation
 	linear_velocity = Vector2.RIGHT.rotated(rotation).normalized() * speed
