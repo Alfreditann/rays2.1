@@ -17,11 +17,6 @@ var last_dir := Vector2.DOWN # default facing down
 
 var speed = 200.0
 
-func shoot():
-	print("should do")
-	print("dir: ", dir)
-	print("pos: ", position)
-
 
 func _physics_process(_delta: float) -> void:
 	if not moving:
@@ -85,6 +80,11 @@ func read_input():
 			Vector2.RIGHT:
 				anim.play("Right_idle")
 
+func shoot():
+
+	print("should do")
+	print("dir: ", dir)
+	print("pos: ", position)
 func start_move(dir: Vector2):
 	moving = true
 	target_pos = global_position + dir * tile_size
