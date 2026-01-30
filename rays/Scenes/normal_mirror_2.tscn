@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Map/mirror.png" id="2_jlr4x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gq41h"]
-size = Vector2(9, 30)
+size = Vector2(20, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0w2"]
 size = Vector2(5.5, 27)
@@ -16,7 +16,6 @@ size = Vector2(10, 23)
 script = ExtResource("1_8tlek")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_gq41h")
 debug_color = Color(0.6421185, 0.5236744, 0.04955721, 0.41960785)
 

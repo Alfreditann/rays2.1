@@ -50,6 +50,6 @@ autostart = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 rotation = 0.01257938
 sprite_frames = SubResource("SpriteFrames_t5kga")
-animation = &"up"
+animation = &"Middle"
 
 [connection signal="area_entered" from="laser_test" to="." method="_on_laser_test_area_entered"]

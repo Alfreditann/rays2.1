@@ -9,6 +9,7 @@ var dir := Vector2.ZERO
 @onready var anim = $AnimatedSprite2D
 
 func _ready():
+	anim.play("Middle")
 	linear_velocity = -global_transform.x * speed
 	$Timer.wait_time = 0.3
 	$Timer.start()
