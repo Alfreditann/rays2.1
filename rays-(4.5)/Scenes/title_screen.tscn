@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdltrvfmyuu6v"]
+
+[ext_resource type="Script" uid="uid://ddife3bmbwmsl" path="res://GDScripts/title_screen.gd" id="1_klylv"]
+[ext_resource type="Texture2D" uid="uid://cpikebhbgg5d3" path="res://Assets/Sprites/mainmenu-rays.png" id="2_p3fck"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_klylv"]
+texture = ExtResource("2_p3fck")
+
+[node name="CreditsScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_klylv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_klylv")
+
+[node name="GameCredits" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -566.0
+offset_top = -5.0
+offset_right = -129.0
+offset_bottom = 283.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "Created by
+Magnus Schjørn Rustad Harris
+Jacob Fosnes Hannestad
+Alfred Skevik Ulsberg
+Eden Holme Gidske
+William Laugerud Rosewell
+Celina Isabel Contreras-Valdes"
+
+[node name="StartGame" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -145.0
+offset_top = -310.0
+offset_right = 68.0
+offset_bottom = -236.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Back to Main Menu"
+
+[node name="Quit Game" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -151.0
+offset_top = -210.0
+offset_right = 76.0
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Quit Game"
+
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Quit Game" to="." method="_on_quit_game_pressed"]

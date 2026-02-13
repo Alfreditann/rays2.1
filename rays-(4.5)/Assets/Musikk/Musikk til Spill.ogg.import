@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dq5l0532v7djg"
+path="res://.godot/imported/Musikk til Spill.ogg-76a639e3b7f80db6e71677501f76ed23.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Musikk/Musikk til Spill.ogg"
+dest_files=["res://.godot/imported/Musikk til Spill.ogg-76a639e3b7f80db6e71677501f76ed23.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
