@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://diobar4pe2vyp"]
+
+[ext_resource type="Script" uid="uid://b2hwjfwtk40eb" path="res://GDScripts/normal_mirror.gd" id="1_8tlek"]
+[ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Map/mirror.png" id="2_jlr4x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gq41h"]
+size = Vector2(20, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0w2"]
+size = Vector2(5.5, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnj3j"]
+size = Vector2(10, 23)
+
+[node name="Normal_Mirror2" type="StaticBody2D"]
+script = ExtResource("1_8tlek")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gq41h")
+debug_color = Color(0.6421185, 0.5236744, 0.04955721, 0.41960785)
+
+[node name="hurtbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+top_level = true
+position = Vector2(7, 1.5)
+shape = SubResource("RectangleShape2D_8w0w2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jlr4x")
+region_enabled = true
+region_rect = Rect2(4.89431, 128.25, 21.163002, 31.73587)
+
+[node name="speil_hitbox2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="speil_hitbox2"]
+position = Vector2(-1, -1.5)
+shape = SubResource("RectangleShape2D_fnj3j")
+debug_color = Color(0.8905607, 0.14936134, 0.7096971, 0.41960785)

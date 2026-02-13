@@ -4,6 +4,10 @@ const tile_size: Vector2 = Vector2(32,32)
 
 @onready var anim = $AnimatedSprite2D
 
+var laser = preload("res://Scenes/laser_test.tscn")
+var pos = Vector2.ZERO
+var is_ready: bool = true
+
 var dir := Vector2.ZERO
 
 
@@ -13,23 +17,11 @@ var last_dir := Vector2.DOWN # default facing down
 
 var speed = 200.0
 
-var laser = preload("res://Scenes/laser.tscn")
-var inst = laser.instantiate()
-
-
 func shoot():
-	
-	laser.queue_free()
-	
-	inst.dir = last_dir
-	
-	add_child(inst)
-	
-	print("should do")
-	print("dir: ", dir)
-	print("pos: ", position)
-
-
+	var laser_instance = laser.instantiate()
+	laser_instance.global_position = global_position
+	laser_instance.dir = last_dir
+	get_tree().current_scene.add_child(laser_instance) 
 func _physics_process(_delta: float) -> void:
 	if not moving:
 		read_input()
@@ -91,7 +83,6 @@ func read_input():
 				anim.play("Left_idle")
 			Vector2.RIGHT:
 				anim.play("Right_idle")
-
 func start_move(dir: Vector2):
 	moving = true
 	target_pos = global_position + dir * tile_size

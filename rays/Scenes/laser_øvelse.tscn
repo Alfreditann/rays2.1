@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://csv25sku6un2f"]
+
+[ext_resource type="Texture2D" uid="uid://t2qj11hrwmyc" path="res://Assets/Player/fireball(3).png" id="1_abnuk"]
+[ext_resource type="Script" uid="uid://cf16urqaxq6ab" path="res://GDScripts/laser_øvelse.gd" id="1_r6msl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_abnuk"]
+size = Vector2(32, 8)
+
+[node name="laser_øvelse" type="CharacterBody2D"]
+slide_on_ceiling = false
+script = ExtResource("1_r6msl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_abnuk")
+region_enabled = true
+region_rect = Rect2(0, 43.75, 32, 9)
+
+[node name="laser" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laser"]
+shape = SubResource("RectangleShape2D_abnuk")
+
+[connection signal="area_entered" from="laser" to="." method="_on_laser_area_entered"]
+[connection signal="body_entered" from="laser" to="." method="_on_laser_body_entered"]
