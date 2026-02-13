@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dkgpwx16us6ra"]
+
+[ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Map/mirror.png" id="1_2mjjl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3i6c"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mjjl"]
+size = Vector2(18, 23)
+
+[node name="mirror" type="StaticBody2D" unique_id=1535472843]
+
+[node name="mirror_hitbox" type="CollisionShape2D" parent="." unique_id=2038108688]
+shape = SubResource("RectangleShape2D_h3i6c")
+
+[node name="mirror_sprite" type="Sprite2D" parent="." unique_id=1909974109]
+texture = ExtResource("1_2mjjl")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="mirror _area" type="Area2D" parent="." unique_id=1269241711]
+
+[node name="mirror_area_shape" type="CollisionShape2D" parent="mirror _area" unique_id=461946536]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2mjjl")
+debug_color = Color(0.8245554, 0.22316906, 0.8153086, 0.41960785)

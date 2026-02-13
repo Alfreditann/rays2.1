@@ -4,7 +4,7 @@ const tile_size: Vector2 = Vector2(32,32)
 
 @onready var anim = $AnimatedSprite2D
 
-var laser = preload("res://Scenes/laser_test.tscn")
+var laser = preload("res://Scenes/laser.tscn")
 var pos = Vector2.ZERO
 var is_ready: bool = true
 
@@ -19,11 +19,15 @@ var speed = 200.0
 
 func shoot():
 	
-		
+	
+	#lete etter laser child
+	for i in range(get_parent().get_children().size()):
+		if get_parent().get_child(i).is_in_group("laser"):
+			remove_child(get_parent().get_child(i))
+			get_parent().get_child(i).queue_free()
+
 	var laser_instance = laser.instantiate()
-	print("checking shoots")
-	if get_tree().current_scene.find_child("laser"):
-		print("found child")
+
 	laser_instance.global_position = global_position
 	laser_instance.dir = last_dir
 	get_tree().current_scene.add_child(laser_instance) 
