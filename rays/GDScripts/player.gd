@@ -98,7 +98,7 @@ func start_move(dir: Vector2):
 		self,
 		"global_position",
 		target_pos,
-		0.18
+		0.15
 	)
 
 	tween.finished.connect(func():
