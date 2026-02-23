@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://1p2s8n6ibfjc"]
+[gd_scene format=3 uid="uid://1p2s8n6ibfjc"]
 
 [ext_resource type="Script" uid="uid://cphtu80xse2nt" path="res://GDScripts/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://cau6m3mrepvux" path="res://Assets/Player/Player Character.png" id="2_gntrk"]
@@ -164,36 +164,36 @@ size = Vector2(25, 31)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dewec"]
 size = Vector2(30, 36)
 
-[node name="player" type="CharacterBody2D" groups=["player"]]
-collision_layer = 5
-collision_mask = 5
+[node name="player" type="CharacterBody2D" unique_id=123147416 groups=["player"]]
+collision_layer = 7
+collision_mask = 7
 script = ExtResource("1_kyqiw")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1634235424]
 sprite_frames = SubResource("SpriteFrames_kyqiw")
 animation = &"Right"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1830465322]
 position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_gntrk")
 
-[node name="Area2D" type="Area2D" parent="." groups=["player"]]
+[node name="Area2D" type="Area2D" parent="." unique_id=2096383734 groups=["player"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1273318002]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_dewec")
 debug_color = Color(0.95168704, 8.663535e-07, 0.56485, 0.41960785)
 
-[node name="up" type="RayCast2D" parent="."]
+[node name="up" type="RayCast2D" parent="." unique_id=293710697]
 target_position = Vector2(0, -22)
 
-[node name="down" type="RayCast2D" parent="."]
+[node name="down" type="RayCast2D" parent="." unique_id=2015036500]
 target_position = Vector2(0, 22)
 
-[node name="left" type="RayCast2D" parent="."]
+[node name="left" type="RayCast2D" parent="." unique_id=889089051]
 target_position = Vector2(-20, 0)
 
-[node name="right" type="RayCast2D" parent="."]
+[node name="right" type="RayCast2D" parent="." unique_id=74578726]
 target_position = Vector2(20, 0)
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

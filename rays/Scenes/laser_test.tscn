@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dm3bykltx1cx2"]
+[gd_scene format=3 uid="uid://dm3bykltx1cx2"]
 
 [ext_resource type="Texture2D" uid="uid://t2qj11hrwmyc" path="res://Assets/Player/fireball(3).png" id="1_6km0w"]
 [ext_resource type="Script" uid="uid://jsag6lebkt30" path="res://GDScripts/laser_test.gd" id="1_t5kga"]
@@ -34,20 +34,20 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="laser_test" type="RigidBody2D"]
+[node name="laser_test" type="RigidBody2D" unique_id=1974307705]
 script = ExtResource("1_t5kga")
 
-[node name="laser_test" type="Area2D" parent="."]
+[node name="laser_test" type="Area2D" parent="." unique_id=917652884]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="laser_test"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="laser_test" unique_id=121100626]
 position = Vector2(-1.5, 0)
 shape = SubResource("RectangleShape2D_6km0w")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1940148705]
 wait_time = 114.0
 autostart = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=311235308]
 rotation = 0.01257938
 sprite_frames = SubResource("SpriteFrames_t5kga")
 animation = &"Middle"
