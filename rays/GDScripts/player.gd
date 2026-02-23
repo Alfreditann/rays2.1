@@ -18,10 +18,16 @@ var last_dir := Vector2.DOWN # default facing down
 var speed = 200.0
 
 func shoot():
+	
+		
 	var laser_instance = laser.instantiate()
+	print("checking shoots")
+	if get_tree().current_scene.find_child("laser"):
+		print("found child")
 	laser_instance.global_position = global_position
 	laser_instance.dir = last_dir
 	get_tree().current_scene.add_child(laser_instance) 
+
 func _physics_process(_delta: float) -> void:
 	if not moving:
 		read_input()
@@ -92,7 +98,7 @@ func start_move(dir: Vector2):
 		self,
 		"global_position",
 		target_pos,
-		0.18
+		0.15
 	)
 
 	tween.finished.connect(func():
