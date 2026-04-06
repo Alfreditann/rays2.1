@@ -12,12 +12,10 @@ func _physics_process(delta: float) -> void:
 		var collider = ray_left.get_collider()
 		if collider and collider.is_in_group("player"):
 			player_detected = true
-			
 	if ray_right.is_colliding():
 		var collider = ray_right.get_collider()
 		if collider and collider.is_in_group("player"):
 			player_detected = true
-	
 	if player_detected:
 		freeze_delay = FREEZE_DELAY_TIME
 		if freeze:
