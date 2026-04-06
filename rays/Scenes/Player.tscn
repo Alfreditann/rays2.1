@@ -174,13 +174,11 @@ sprite_frames = SubResource("SpriteFrames_kyqiw")
 animation = &"Front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1607148931]
-position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_gntrk")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1413544181 groups=["player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2072696811]
-position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_dewec")
 debug_color = Color(0.95168704, 8.663535e-07, 0.56485, 0.41960785)
 

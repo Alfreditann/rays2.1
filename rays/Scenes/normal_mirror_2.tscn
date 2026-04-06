@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://diobar4pe2vyp"]
+[gd_scene format=3 uid="uid://diobar4pe2vyp"]
 
 [ext_resource type="Script" uid="uid://b2hwjfwtk40eb" path="res://GDScripts/normal_mirror.gd" id="1_8tlek"]
-[ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Map/mirror.png" id="2_jlr4x"]
+[ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Objects/mirror.png" id="2_jlr4x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gq41h"]
 size = Vector2(20, 30)

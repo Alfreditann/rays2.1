@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2b5bmiyplfrm"]
+[gd_scene format=3 uid="uid://b2b5bmiyplfrm"]
 
-[ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Map/mirror.png" id="1_2gpgd"]
+[ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Objects/mirror.png" id="1_2gpgd"]
 [ext_resource type="Script" uid="uid://b2hwjfwtk40eb" path="res://GDScripts/normal_mirror.gd" id="1_8w0w2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gq41h"]

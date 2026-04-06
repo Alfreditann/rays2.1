@@ -10,6 +10,7 @@ var is_ready: bool = true
 
 var dir := Vector2.ZERO
 
+signal interact()
 
 var target_pos: Vector2
 var moving := false
@@ -18,8 +19,6 @@ var last_dir := Vector2.DOWN # default facing down
 var speed = 200.0
 
 func shoot():
-	
-	
 	#lete etter laser child
 	for i in range(get_parent().get_children().size()):
 		if get_parent().get_child(i).is_in_group("laser"):
@@ -41,6 +40,10 @@ func _physics_process(_delta: float) -> void:
 
 func read_input():
 	var dir := Vector2.ZERO
+	# Interact with mirror(can bli utvided om flere ting blir lagt til)
+	if Input.is_action_just_pressed("action_2"):
+		interact.emit()
+	
 	# Tile-based movement input + collision check
 	if Input.is_action_pressed("move_up"):
 		$up.force_raycast_update()
@@ -93,6 +96,7 @@ func read_input():
 				anim.play("Left_idle")
 			Vector2.RIGHT:
 				anim.play("Right_idle")
+
 func start_move(dir: Vector2):
 	moving = true
 	target_pos = global_position + dir * tile_size

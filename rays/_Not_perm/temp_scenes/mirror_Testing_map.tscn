@@ -135,7 +135,7 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_3muat")
 
-[node name="Node2D" type="Node2D" unique_id=868366252]
+[node name="Map" type="Node2D" unique_id=868366252]
 metadata/_edit_vertical_guides_ = [544.0, 480.0]
 metadata/_edit_horizontal_guides_ = [448.0]
 
@@ -144,7 +144,7 @@ tile_map_data = PackedByteArray("AAA3ACoAAAAIAAEAAAA4ACoAAAAIAAEAAAA5ACoAAAAIAAE
 tile_set = SubResource("TileSet_e8ko8")
 
 [node name="player" parent="." unique_id=1488179152 instance=ExtResource("2_7h6s0")]
-position = Vector2(494, 432)
+position = Vector2(559, 400)
 
 [node name="mirror" parent="." unique_id=1535472843 instance=ExtResource("3_7h6s0")]
 position = Vector2(560, 336)
