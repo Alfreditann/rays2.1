@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://dkgpwx16us6ra"]
+
+[ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Objects/mirror.png" id="1_2mjjl"]
+[ext_resource type="Script" uid="uid://c12r7wbk5btke" path="res://GDScripts/mirror.gd" id="1_h3i6c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3i6c"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mjjl"]
+size = Vector2(18, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3i6c"]
+atlas = ExtResource("1_2mjjl")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16kbh"]
+atlas = ExtResource("1_2mjjl")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u08g2"]
+atlas = ExtResource("1_2mjjl")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_est24"]
+atlas = ExtResource("1_2mjjl")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_olbvc"]
+atlas = ExtResource("1_2mjjl")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw4r7"]
+atlas = ExtResource("1_2mjjl")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6j15i"]
+atlas = ExtResource("1_2mjjl")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3rxv"]
+atlas = ExtResource("1_2mjjl")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_141hl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3i6c")
+}],
+"loop": true,
+"name": &"rotation_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16kbh")
+}],
+"loop": true,
+"name": &"rotation_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u08g2")
+}],
+"loop": true,
+"name": &"rotation_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_est24")
+}],
+"loop": true,
+"name": &"rotation_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_olbvc")
+}],
+"loop": true,
+"name": &"rotation_5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw4r7")
+}],
+"loop": true,
+"name": &"rotation_6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6j15i")
+}],
+"loop": true,
+"name": &"rotation_7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3rxv")
+}],
+"loop": true,
+"name": &"rotation_8",
+"speed": 5.0
+}]
+
+[node name="mirror" type="StaticBody2D" unique_id=1535472843]
+script = ExtResource("1_h3i6c")
+
+[node name="mirror_hitbox" type="CollisionShape2D" parent="." unique_id=2038108688]
+shape = SubResource("RectangleShape2D_h3i6c")
+
+[node name="mirror _area" type="Area2D" parent="." unique_id=1269241711]
+
+[node name="mirror_area_shape" type="CollisionShape2D" parent="mirror _area" unique_id=461946536]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_2mjjl")
+debug_color = Color(0.8245554, 0.22316906, 0.8153086, 0.41960785)
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1955598353]
+sprite_frames = SubResource("SpriteFrames_141hl")
+animation = &"rotation_8"

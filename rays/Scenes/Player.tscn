@@ -171,7 +171,7 @@ script = ExtResource("1_kyqiw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1634235424]
 sprite_frames = SubResource("SpriteFrames_kyqiw")
-animation = &"Right"
+animation = &"Front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1830465322]
 position = Vector2(0.5, 0.5)

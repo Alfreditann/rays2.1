@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dbmyo5t0t7v7o"]
 
-[ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Map/mirror.png" id="1_85veo"]
+[ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Objects/mirror.png" id="1_85veo"]
 [ext_resource type="Script" uid="uid://1loq1ea4g3us" path="res://GDScripts/pushable_mirror.gd" id="1_yulij"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_yulij"]
