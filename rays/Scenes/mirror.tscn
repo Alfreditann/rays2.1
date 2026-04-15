@@ -114,9 +114,9 @@ script = ExtResource("1_h3i6c")
 [node name="mirror_hitbox" type="CollisionShape2D" parent="." unique_id=2038108688]
 shape = SubResource("RectangleShape2D_h3i6c")
 
-[node name="mirror _area" type="Area2D" parent="." unique_id=1269241711]
+[node name="speil_hitbox" type="Area2D" parent="." unique_id=1269241711]
 
-[node name="mirror_area_shape" type="CollisionShape2D" parent="mirror _area" unique_id=461946536]
+[node name="mirror_area_shape" type="CollisionShape2D" parent="speil_hitbox" unique_id=461946536]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_2mjjl")
 debug_color = Color(0.8245554, 0.22316906, 0.8153086, 0.41960785)

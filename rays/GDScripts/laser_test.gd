@@ -25,6 +25,7 @@ func _ready():
 	if dir != Vector2.ZERO:
 		linear_velocity = dir.normalized() * speed
 		rotation = dir.angle()
+
 func start_motion() -> void:
 	# Compute velocity from the current rotation
 	linear_velocity = Vector2.RIGHT.rotated(rotation).normalized() * speed
@@ -33,13 +34,53 @@ func start_motion() -> void:
 
 func _on_laser_test_area_entered(area: Area2D) -> void:
 	if area.name == "speil_hitbox":
-		linear_velocity = Vector2.RIGHT * speed
-		anim.play("Middle")
-		print("Hit")
-	elif area.name == "speil_hitbox2":
-		linear_velocity = Vector2.UP * speed
-		anim.play("up")
+		var mirror = area.get_parent()
+		var going = Decide_Vel(linear_velocity, mirror)
+		if going != null:
+			linear_velocity = going.normalized() * speed
 	if area.name == "hurtbox":
 		queue_free()
 	if area.name == "monster":
 		queue_free()
+
+func Decide_Vel(Current_Vel, mirror):
+	var mirror_dir = mirror.mirror_dir
+	#global_position = mirror.global_position | litt hacky men gjør laseren helt rigktig plasert
+	
+	if Current_Vel[0] > 0: #den går til høyre her
+		if mirror_dir == 2: #speil står i mellom ned og venstre
+			return Vector2.DOWN
+		if mirror_dir == 3: #speil ser mot venstre
+			return Vector2.LEFT
+		if mirror_dir == 4: #speil står i mellom opp og venstre
+			return Vector2.UP
+		else:
+			queue_free()
+	elif Current_Vel[0] < 0: #den går til venstre her
+		if mirror_dir == 6: #speil står i mellom opp og høyre
+			return Vector2.UP
+		if mirror_dir == 7: #speil ser mot høyre
+			return Vector2.RIGHT
+		if mirror_dir == 8: #speil står i mellom ned og høyre
+			return Vector2.DOWN
+		else:
+			queue_free()
+	elif Current_Vel[1] > 0: #den går ned her
+		if mirror_dir == 4: #speil står i mellom opp og venstre
+			return Vector2.LEFT
+		if mirror_dir == 5: #speil ser opp
+			return Vector2.UP
+		if mirror_dir == 6: #speil står i mellom opp og høyre
+			return Vector2.RIGHT
+		else:
+			queue_free()
+	elif Current_Vel[1] < 0: #den går opp her
+		if mirror_dir == 8: #speil står i mellom ned og høyre
+			return Vector2.RIGHT
+		if mirror_dir == 1: #speil ser ned her
+			return Vector2.DOWN
+		if mirror_dir == 2: #speil står i mellom ned og venstre
+			return Vector2.LEFT
+		else:
+			queue_free()
+	pass
