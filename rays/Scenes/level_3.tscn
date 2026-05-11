@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dcai6x3ww052d" path="res://Scenes/pause_menu.tscn" id="5_vwg62"]
 [ext_resource type="PackedScene" uid="uid://1p2s8n6ibfjc" path="res://Scenes/Player.tscn" id="6_53xsp"]
 [ext_resource type="PackedScene" uid="uid://dkgpwx16us6ra" path="res://Scenes/mirror.tscn" id="6_qf6rc"]
+[ext_resource type="PackedScene" uid="uid://x7ytc4sof1tc" path="res://Scenes/push_mirror.tscn" id="7_5e78q"]
 [ext_resource type="PackedScene" uid="uid://dbmyo5t0t7v7o" path="res://Scenes/pushable_mirror.tscn" id="7_53xsp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ffim"]
@@ -498,3 +499,6 @@ position = Vector2(528, 432)
 
 [node name="mirror" parent="." unique_id=1535472843 instance=ExtResource("6_qf6rc")]
 position = Vector2(560, 336)
+
+[node name="PushMirror" parent="." unique_id=1899257704 instance=ExtResource("7_5e78q")]
+position = Vector2(528, 398)

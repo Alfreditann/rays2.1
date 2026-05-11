@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 const tile_size: Vector2 = Vector2(32,32)

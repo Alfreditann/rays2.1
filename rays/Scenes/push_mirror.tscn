@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://x7ytc4sof1tc"]
+
+[ext_resource type="Texture2D" uid="uid://b6nau0hdpt3bv" path="res://Assets/Objects/mirror.png" id="1_i78wt"]
+[ext_resource type="Script" uid="uid://da33wh6d6y46a" path="res://GDScripts/move_component.gd" id="2_1aegk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1aegk"]
+size = Vector2(30, 30)
+
+[node name="PushMirror" type="CharacterBody2D" unique_id=1899257704]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1280412062]
+texture = ExtResource("1_i78wt")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 31.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=180038929]
+shape = SubResource("RectangleShape2D_1aegk")
+
+[node name="MoveComponent" type="Node" parent="." unique_id=676501714]
+script = ExtResource("2_1aegk")
+
+[node name="RightCollisionRay" type="RayCast2D" parent="." unique_id=1554549398]
+target_position = Vector2(20, 0)
+
+[node name="LeftCollisionRay" type="RayCast2D" parent="." unique_id=355508927]
+target_position = Vector2(-20, 0)
