@@ -49,10 +49,13 @@ func Decide_Vel(Current_Vel, mirror):
 	
 	if Current_Vel[0] > 0: #den går til høyre her
 		if mirror_dir == 2: #speil står i mellom ned og venstre
+			anim.play("up")
 			return Vector2.DOWN
 		if mirror_dir == 3: #speil ser mot venstre
-			return Vector2.LEFT
+			anim.play("Middle")
+			return Vector2.LEFT 
 		if mirror_dir == 4: #speil står i mellom opp og venstre
+			anim.play("up")
 			return Vector2.UP
 		else:
 			queue_free()
@@ -61,6 +64,7 @@ func Decide_Vel(Current_Vel, mirror):
 			return Vector2.UP
 		if mirror_dir == 7: #speil ser mot høyre
 			return Vector2.RIGHT
+			anim.play("Middle")
 		if mirror_dir == 8: #speil står i mellom ned og høyre
 			return Vector2.DOWN
 		else:
