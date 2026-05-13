@@ -7,6 +7,8 @@
 size = Vector2(30, 30)
 
 [node name="PushMirror" type="CharacterBody2D" unique_id=1899257704]
+collision_layer = 8
+collision_mask = 7
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1280412062]
 texture = ExtResource("1_i78wt")
@@ -20,9 +22,9 @@ shape = SubResource("RectangleShape2D_1aegk")
 script = ExtResource("2_1aegk")
 
 [node name="RightCollisionRay" type="RayCast2D" parent="." unique_id=1554549398]
-target_position = Vector2(20, 0)
-collision_mask = 4
+target_position = Vector2(22, -1)
+collision_mask = 16
 
 [node name="LeftCollisionRay" type="RayCast2D" parent="." unique_id=355508927]
-target_position = Vector2(-20, 0)
-collision_mask = 4
+target_position = Vector2(-22, 0)
+collision_mask = 16

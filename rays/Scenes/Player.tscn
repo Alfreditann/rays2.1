@@ -165,8 +165,8 @@ size = Vector2(25, 31)
 size = Vector2(30, 36)
 
 [node name="player" type="CharacterBody2D" unique_id=123147416 groups=["player"]]
-collision_layer = 7
-collision_mask = 7
+collision_layer = 16
+collision_mask = 15
 script = ExtResource("1_kyqiw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1634235424]
@@ -186,14 +186,18 @@ debug_color = Color(0.95168704, 8.663535e-07, 0.56485, 0.41960785)
 
 [node name="up" type="RayCast2D" parent="." unique_id=293710697]
 target_position = Vector2(0, -22)
+collision_mask = 8
 
 [node name="down" type="RayCast2D" parent="." unique_id=2015036500]
 target_position = Vector2(0, 22)
+collision_mask = 8
 
 [node name="left" type="RayCast2D" parent="." unique_id=889089051]
 target_position = Vector2(-20, 0)
+collision_mask = 8
 
 [node name="right" type="RayCast2D" parent="." unique_id=74578726]
 target_position = Vector2(20, 0)
+collision_mask = 8
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

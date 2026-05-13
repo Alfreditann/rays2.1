@@ -137,6 +137,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_xfk5q"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_8ffim")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7p6j4"]
@@ -280,7 +281,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_6444e"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 2
-physics_layer_0/collision_mask = 2
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_7p6j4")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evi0p"]
@@ -375,20 +376,16 @@ texture_region_size = Vector2i(32, 32)
 1:5/0 = 0
 2:5/0 = 0
 3:5/0 = 0
-3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:5/0 = 0
 5:5/0 = 0
 6:5/0 = 0
-6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:5/0 = 0
 8:5/0 = 0
 0:6/0 = 0
 1:6/0 = 0
 2:6/0 = 0
 3:6/0 = 0
-3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:6/0 = 0
-4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 5:6/0 = 0
 6:6/0 = 0
 7:6/0 = 0
@@ -428,7 +425,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_lsmp6"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 4
-physics_layer_0/collision_mask = 4
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_evi0p")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrdnt"]
@@ -464,6 +461,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_wrinw"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_xrdnt")
 
 [node name="Map" type="Node2D" unique_id=227730410]
@@ -495,10 +493,10 @@ visible = false
 position = Vector2(560, 400)
 
 [node name="PushableMirror" parent="." unique_id=665721197 instance=ExtResource("7_53xsp")]
-position = Vector2(528, 432)
+position = Vector2(839, 435)
 
 [node name="mirror" parent="." unique_id=1535472843 instance=ExtResource("6_qf6rc")]
 position = Vector2(560, 336)
 
 [node name="PushMirror" parent="." unique_id=1899257704 instance=ExtResource("7_5e78q")]
-position = Vector2(528, 398)
+position = Vector2(547, 429)
