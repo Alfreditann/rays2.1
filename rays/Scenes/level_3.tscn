@@ -137,7 +137,6 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_xfk5q"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_8ffim")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7p6j4"]
@@ -281,7 +280,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_6444e"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 2
-physics_layer_0/collision_mask = 0
+physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_7p6j4")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evi0p"]
@@ -385,7 +384,9 @@ texture_region_size = Vector2i(32, 32)
 1:6/0 = 0
 2:6/0 = 0
 3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.921661, -16, -8.921661, 16, -16, 16, -16, -16)
 4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(10.8334465, -16, 10.514816, 16, 16, 16, 16, -16)
 5:6/0 = 0
 6:6/0 = 0
 7:6/0 = 0
@@ -395,6 +396,7 @@ texture_region_size = Vector2i(32, 32)
 2:7/0 = 0
 3:7/0 = 0
 4:7/0 = 0
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 5:7/0 = 0
 6:7/0 = 0
 7:7/0 = 0
@@ -425,7 +427,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_lsmp6"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 4
-physics_layer_0/collision_mask = 0
+physics_layer_0/collision_mask = 4
 sources/0 = SubResource("TileSetAtlasSource_evi0p")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrdnt"]
@@ -461,7 +463,6 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_wrinw"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
-physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_xrdnt")
 
 [node name="Map" type="Node2D" unique_id=227730410]
@@ -475,7 +476,7 @@ tile_map_data = PackedByteArray("AAAPAA0AAAADAAQAAAATAA0AAAADAAQAAAA=")
 tile_set = SubResource("TileSet_6444e")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="." unique_id=944622525]
-tile_map_data = PackedByteArray("AAAOAAkAAAADAAAAAAANAAkAAAAEAAAAAAAMAAkAAAAFAAAAAAAQAAwAAAADAAUAAAAQAAsAAAADAAUAAAAQAAoAAAADAAUAAAARAAoAAAADAAUAAAASAAoAAAADAAUAAAASAAsAAAADAAUAAAARAAsAAAADAAUAAAARAAwAAAADAAUAAAASAAwAAAADAAUAAAAPAAwAAAAGAAUAAFAPAAsAAAAGAAUAAFATAAwAAAAGAAUAAGATAAsAAAAGAAUAAGATAAoAAAAGAAUAAGAPAAoAAAAGAAUAAFAPAA0AAAADAAQAAAATAA0AAAADAAQAAAA=")
+tile_map_data = PackedByteArray("AAAOAAkAAAADAAAAAAANAAkAAAAEAAAAAAAMAAkAAAAFAAAAAAAQAA0AAAADAAYAAAASAA0AAAAEAAYAAAAQAAwAAAAEAAcAAAARAAwAAAAEAAcAAAASAAwAAAAEAAcAAAA=")
 tile_set = SubResource("TileSet_lsmp6")
 
 [node name="TileMapLayer4" type="TileMapLayer" parent="." unique_id=1861509110]
@@ -490,13 +491,13 @@ position = Vector2(366, 173)
 visible = false
 
 [node name="player" parent="." unique_id=1442955967 instance=ExtResource("6_53xsp")]
-position = Vector2(560, 400)
+position = Vector2(369, 393)
 
 [node name="PushableMirror" parent="." unique_id=665721197 instance=ExtResource("7_53xsp")]
-position = Vector2(839, 435)
+position = Vector2(546, 433)
 
 [node name="mirror" parent="." unique_id=1535472843 instance=ExtResource("6_qf6rc")]
 position = Vector2(560, 336)
 
 [node name="PushMirror" parent="." unique_id=1899257704 instance=ExtResource("7_5e78q")]
-position = Vector2(547, 429)
+position = Vector2(880, 375)

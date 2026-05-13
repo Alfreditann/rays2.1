@@ -1,7 +1,7 @@
 class_name MoveComponent
 extends Node
 
-#@export var gravity : float = 3000.0
+@export var gravity : float = 3000.0
 @export var speed : float = 30.0
 @onready var left_collision_ray: RayCast2D = $"../LeftCollisionRay"
 @onready var right_collision_ray: RayCast2D = $"../RightCollisionRay"
@@ -12,14 +12,14 @@ var grabbed : bool = false
 var player : Player = null
 
 func _physics_process(delta: float) -> void:
-	#_apply_gravity(delta)
+	_apply_gravity(delta)
 	_push_movement()
 	
 	parent.move_and_slide()
 	
-#func _apply_gravity(delta : float) -> void:
-	#if not parent.is_on_floor():
-		#parent.velocity.y += gravity * delta
+func _apply_gravity(delta : float) -> void:
+	if not parent.is_on_floor():
+		parent.velocity.y += gravity * delta
 		
 func _push_movement() -> void:
 	var direction = Input.get_axis("ui_left", "ui_right")
