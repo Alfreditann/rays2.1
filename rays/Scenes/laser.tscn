@@ -7,8 +7,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6km0w"]
 size = Vector2(29, 8)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pc01"]
+atlas = ExtResource("3_c8ure")
+region = Rect2(32, 0, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_1k6qa"]
 atlas = ExtResource("2_3pc01")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8ure"]
+atlas = ExtResource("3_c8ure")
 region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_akndn"]
@@ -19,10 +27,26 @@ region = Rect2(32, 0, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_3pc01")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_1k6qa")
 }],
 "loop": true,
-"name": &"Middle",
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8ure")
+}],
+"loop": true,
+"name": &"right",
 "speed": 5.0
 }, {
 "frames": [{
@@ -50,6 +74,6 @@ autostart = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=758318649]
 rotation = 0.01257938
 sprite_frames = SubResource("SpriteFrames_t5kga")
-animation = &"Middle"
+animation = &"right"
 
 [connection signal="area_entered" from="laser_area" to="." method="_on_laser_test_area_entered"]

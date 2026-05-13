@@ -10,7 +10,7 @@ var dir := Vector2.ZERO
 
 func _ready():
 	add_to_group("laser")
-	anim.play("Middle")
+	anim.play("left")
 	linear_velocity = -global_transform.x * speed
 	$Timer.wait_time = 0.3
 	$Timer.start()
@@ -46,45 +46,50 @@ func _on_laser_test_area_entered(area: Area2D) -> void:
 func Decide_Vel(Current_Vel, mirror):
 	var mirror_dir = mirror.mirror_dir
 	#global_position = mirror.global_position | litt hacky men gjør laseren helt rigktig plasert
-	
-	if Current_Vel[0] > 0: #den går til høyre her
-		if mirror_dir == 2: #speil står i mellom ned og venstre
-			anim.play("up")
+
+	if Current_Vel.x > 0: # går mot høyre
+		if mirror_dir == 2:
+			anim.play("down")
 			return Vector2.DOWN
-		if mirror_dir == 3: #speil ser mot venstre
-			anim.play("Middle")
-			return Vector2.LEFT 
-		if mirror_dir == 4: #speil står i mellom opp og venstre
-			anim.play("up")
-			return Vector2.UP
-		else:
-			queue_free()
-	elif Current_Vel[0] < 0: #den går til venstre her
-		if mirror_dir == 6: #speil står i mellom opp og høyre
-			return Vector2.UP
-		if mirror_dir == 7: #speil ser mot høyre
-			return Vector2.RIGHT
-			anim.play("Middle")
-		if mirror_dir == 8: #speil står i mellom ned og høyre
-			return Vector2.DOWN
-		else:
-			queue_free()
-	elif Current_Vel[1] > 0: #den går ned her
-		if mirror_dir == 4: #speil står i mellom opp og venstre
+		if mirror_dir == 3:
+			anim.play("left")
 			return Vector2.LEFT
-		if mirror_dir == 5: #speil ser opp
+		if mirror_dir == 4:
+			anim.play("up")
 			return Vector2.UP
-		if mirror_dir == 6: #speil står i mellom opp og høyre
+		queue_free()
+	elif Current_Vel.x < 0: # går mot venstre
+		if mirror_dir == 6:
+			anim.play("up")
+			return Vector2.UP
+		if mirror_dir == 7:
+			anim.play("right")
 			return Vector2.RIGHT
-		else:
-			queue_free()
-	elif Current_Vel[1] < 0: #den går opp her
-		if mirror_dir == 8: #speil står i mellom ned og høyre
-			return Vector2.RIGHT
-		if mirror_dir == 1: #speil ser ned her
+		if mirror_dir == 8:
+			anim.play("down")
 			return Vector2.DOWN
-		if mirror_dir == 2: #speil står i mellom ned og venstre
+		queue_free()
+	elif Current_Vel.y > 0: # går ned
+		if mirror_dir == 4:
+			anim.play("left")
 			return Vector2.LEFT
-		else:
-			queue_free()
-	pass
+		if mirror_dir == 5:
+			anim.play("up")
+			return Vector2.UP
+		if mirror_dir == 6:
+			anim.play("right")
+			return Vector2.RIGHT
+		queue_free()
+	elif Current_Vel.y < 0: # går opp
+		if mirror_dir == 8:
+			anim.play("right")
+			return Vector2.RIGHT
+		if mirror_dir == 1:
+			anim.play("down")
+			return Vector2.DOWN
+		if mirror_dir == 2:
+			anim.play("left")
+			return Vector2.LEFT
+		queue_free()
+
+	return null
