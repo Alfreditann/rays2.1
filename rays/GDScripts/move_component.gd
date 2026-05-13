@@ -3,8 +3,8 @@ extends Node
 
 @export var gravity : float = 3000.0
 @export var speed : float = 30.0
-@export var left_collision_ray: RayCast2D
-@export var right_collision_ray: RayCast2D
+@onready var left_collision_ray: RayCast2D = $"../LeftCollisionRay"
+@onready var right_collision_ray: RayCast2D = $"../RightCollisionRay"
 
 @onready var parent: CharacterBody2D = get_parent()
 
