@@ -33,7 +33,7 @@ func start_motion() -> void:
 	# Debug:
 
 func _on_laser_test_area_entered(area: Area2D) -> void:
-	if area.name == "speil_hitbox":
+	if area.name.begins_with("speil_hitbox"):
 		var mirror = area.get_parent()
 		var going = Decide_Vel(linear_velocity, mirror)
 		if going != null:
