@@ -7,6 +7,14 @@
 atlas = ExtResource("1_7ji8b")
 region = Rect2(0, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8m63"]
+atlas = ExtResource("1_7ji8b")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8hya"]
+atlas = ExtResource("1_7ji8b")
+region = Rect2(0, 160, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_rkglb"]
 animations = [{
 "frames": [{
@@ -14,7 +22,23 @@ animations = [{
 "texture": SubResource("AtlasTexture_lsoab")
 }],
 "loop": true,
-"name": &"Speil1",
+"name": &"DyttSpeil1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8m63")
+}],
+"loop": true,
+"name": &"DyttSpeil2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8hya")
+}],
+"loop": true,
+"name": &"DyttSpeil3",
 "speed": 5.0
 }]
 
@@ -26,7 +50,7 @@ script = ExtResource("1_lsoab")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=302489864]
 sprite_frames = SubResource("SpriteFrames_rkglb")
-animation = &"Speil1"
+animation = &"DyttSpeil3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=394107423]
 shape = SubResource("RectangleShape2D_7ji8b")
