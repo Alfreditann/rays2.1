@@ -5,6 +5,7 @@ const tile_size: Vector2 = Vector2(32,32)
 
 @onready var anim = $AnimatedSprite2D
 
+
 var laser = preload("res://Scenes/laser.tscn")
 var pos = Vector2.ZERO
 var is_ready: bool = true

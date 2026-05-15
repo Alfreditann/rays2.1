@@ -45,12 +45,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ji8b"]
 size = Vector2(30, 30)
 
-[node name="DyttbarSpeil" type="CharacterBody2D" unique_id=1820143221]
+[node name="DyttbarSpeil" type="CharacterBody2D" unique_id=1820143221 groups=["DyttSpeils"]]
+collision_layer = 24
+collision_mask = 23
 script = ExtResource("1_lsoab")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=302489864]
 sprite_frames = SubResource("SpriteFrames_rkglb")
-animation = &"DyttSpeil3"
+animation = &"DyttSpeil1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=394107423]
 shape = SubResource("RectangleShape2D_7ji8b")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=263069525]
+target_position = Vector2(0, -24)

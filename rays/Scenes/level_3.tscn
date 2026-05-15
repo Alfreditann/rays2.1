@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dkgpwx16us6ra" path="res://Scenes/mirror.tscn" id="6_qf6rc"]
 [ext_resource type="PackedScene" uid="uid://x7ytc4sof1tc" path="res://Scenes/push_mirror.tscn" id="7_5e78q"]
 [ext_resource type="PackedScene" uid="uid://dbmyo5t0t7v7o" path="res://Scenes/pushable_mirror.tscn" id="7_53xsp"]
+[ext_resource type="PackedScene" uid="uid://psqswvnt7y3e" path="res://Scenes/Speil-Mirror/dyttbar_speil.tscn" id="8_5e78q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8ffim"]
 texture = ExtResource("1_ng0s0")
@@ -494,10 +495,13 @@ visible = false
 position = Vector2(369, 393)
 
 [node name="PushableMirror" parent="." unique_id=665721197 instance=ExtResource("7_53xsp")]
-position = Vector2(546, 433)
+position = Vector2(616, 333)
 
 [node name="mirror" parent="." unique_id=1535472843 instance=ExtResource("6_qf6rc")]
 position = Vector2(560, 336)
 
 [node name="PushMirror" parent="." unique_id=1899257704 instance=ExtResource("7_5e78q")]
 position = Vector2(880, 375)
+
+[node name="DyttbarSpeil" parent="." unique_id=1820143221 instance=ExtResource("8_5e78q")]
+position = Vector2(533, 431)
