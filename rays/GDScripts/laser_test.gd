@@ -6,6 +6,10 @@ var last_hit_time := 0.0
 var hit_delay := 0.2 # prevents multiple triggers per frame
 var rect_shape1 = 0
 var dir := Vector2.ZERO
+var last_hit_mirror: Node = null  # ADD THIS
+
+const distance = 3 # hvor mange tiles før laseren forsvinnere
+
 @onready var anim = $AnimatedSprite2D
 
 func _ready():
@@ -21,27 +25,40 @@ func _ready():
 	# Make sure the body isn't sleeping when we set velocity
 	sleeping = false
 	linear_velocity = Vector2.LEFT.rotated(rotation) * speed
+	$Timer.wait_time = (32 * distance) / float(speed)
+	$Timer.start()
 	
 	if dir != Vector2.ZERO:
 		linear_velocity = dir.normalized() * speed
 		rotation = dir.angle()
 
-func start_motion() -> void:
-	# Compute velocity from the current rotation
-	linear_velocity = Vector2.RIGHT.rotated(rotation).normalized() * speed
-	sleeping = false
-	# Debug:
-
 func _on_laser_test_area_entered(area: Area2D) -> void:
 	if area.name == "speil_hitbox":
+		
 		var mirror = area.get_parent()
+		
+		if mirror == last_hit_mirror: 
+			return
+		last_hit_mirror = mirror  
+		
 		var going = Decide_Vel(linear_velocity, mirror)
 		if going != null:
-			linear_velocity = going.normalized() * speed
+			dir = going
+			call_deferred("_apply_bounce", going)  # setter alle verdier etter at spill-motoren er ferdig med matten sin
+			$Timer.start()  # RESET timer on every mirror hit
+			
 	if area.name == "hurtbox":
 		queue_free()
 	if area.name == "monster":
 		queue_free()
+		
+		
+func _on_timer_timeout() -> void:
+	queue_free()
+
+func _apply_bounce(going: Vector2) -> void:
+	linear_velocity = going.normalized() * speed
+	rotation = going.angle()
 
 func Decide_Vel(Current_Vel, mirror):
 	var mirror_dir = mirror.mirror_dir
