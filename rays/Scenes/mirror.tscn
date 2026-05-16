@@ -7,7 +7,7 @@
 size = Vector2(32, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2mjjl"]
-size = Vector2(18, 23)
+size = Vector2(32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h3i6c"]
 atlas = ExtResource("1_2mjjl")
@@ -117,10 +117,12 @@ shape = SubResource("RectangleShape2D_h3i6c")
 [node name="speil_hitbox" type="Area2D" parent="." unique_id=1269241711]
 
 [node name="mirror_area_shape" type="CollisionShape2D" parent="speil_hitbox" unique_id=461946536]
-position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_2mjjl")
 debug_color = Color(0.8245554, 0.22316906, 0.8153086, 0.41960785)
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1955598353]
 sprite_frames = SubResource("SpriteFrames_141hl")
-animation = &"rotation_8"
+animation = &"rotation_1"
+
+[connection signal="area_entered" from="speil_hitbox" to="." method="_on_speil_hitbox_area_entered"]
+[connection signal="area_exited" from="speil_hitbox" to="." method="_on_speil_hitbox_area_exited"]
