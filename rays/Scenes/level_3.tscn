@@ -494,10 +494,10 @@ visible = false
 position = Vector2(369, 393)
 
 [node name="PushableMirror" parent="." unique_id=665721197 instance=ExtResource("7_53xsp")]
-position = Vector2(546, 433)
+position = Vector2(544, 431)
 
 [node name="mirror" parent="." unique_id=1535472843 instance=ExtResource("6_qf6rc")]
 position = Vector2(560, 336)
 
 [node name="PushMirror" parent="." unique_id=1899257704 instance=ExtResource("7_5e78q")]
-position = Vector2(880, 375)
+position = Vector2(831, 375)

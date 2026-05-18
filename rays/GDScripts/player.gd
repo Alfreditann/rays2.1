@@ -43,7 +43,8 @@ func read_input():
 	var dir := Vector2.ZERO
 	# Interact with mirror(can bli utvided om flere ting blir lagt til)
 	if Input.is_action_just_pressed("action_2"):
-		interact.emit()
+		interact.emit()  
+		try_push()
 	
 	# Tile-based movement input + collision check
 	if Input.is_action_pressed("move_up"):
@@ -97,6 +98,27 @@ func read_input():
 				anim.play("Left_idle")
 			Vector2.RIGHT:
 				anim.play("Right_idle")
+
+func get_facing_ray() -> RayCast2D:
+	match last_dir:
+		Vector2.UP:
+			return $up
+		Vector2.DOWN:
+			return $down
+		Vector2.LEFT:
+			return $left
+		Vector2.RIGHT:
+			return $right
+	return null
+	
+func try_push():
+	var ray = get_facing_ray()
+	
+	if ray and ray.is_colliding():
+		var collider = ray.get_collider()
+		
+		if collider and collider.has_method("push"):
+			collider.push(last_dir)
 
 func start_move(dir: Vector2):
 	moving = true
