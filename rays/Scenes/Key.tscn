@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dv6iof3jena50"]
 
-[ext_resource type="Script" uid="uid://dwwolh5ke5t7i" path="res://GDScripts/key.gd" id="1_i3td7"]
+[ext_resource type="Script" uid="uid://dtmsxbfu5fkv7" path="res://GDScripts/key.gd" id="1_i3td7"]
 [ext_resource type="Texture2D" uid="uid://dnncvapa3370x" path="res://Assets/Player/Fireball2.webp" id="1_og2wv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3td7"]

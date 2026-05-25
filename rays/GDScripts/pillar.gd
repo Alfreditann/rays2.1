@@ -4,7 +4,7 @@ var opened = false
 
 
 func _process(delta: float) -> void:
-	if "key"in Global.keyFounded:
+	if "key" in Global.keyFounded:
 		open_pillar()
 
 
