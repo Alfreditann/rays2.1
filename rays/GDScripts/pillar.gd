@@ -1,15 +1,15 @@
 extends RigidBody2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var opened = false
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if "key" in Global.keyFounded:
-		print("hei")
-		$AnimationPlayer.play("pillar_anim")
-		await($AnimationPlayer.animation_finished)
-		queue_free()
+	if "key"in Global.keyFounded:
+		open_pillar()
+
+
+func open_pillar() -> void:
+	print("hei")
+	$AnimationPlayer.play("pillar_anim")
+	await $AnimationPlayer.animation_finished
+	queue_free()
