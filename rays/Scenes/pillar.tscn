@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://corcbrotvdfg2"]
+[gd_scene format=3 uid="uid://bn17f01mf14md"]
 
-[ext_resource type="Script" uid="uid://clsm413ayem8e" path="res://GDScripts/pillar.gd" id="1_hyvb2"]
-[ext_resource type="Texture2D" uid="uid://cr1mrywa2db85" path="res://Assets/Sprites/Monster.png" id="2_hyvb2"]
-[ext_resource type="Texture2D" uid="uid://cdtqs3tsx2sgj" path="res://Assets/Sprites/pausemenu-rays.png" id="3_hyvb2"]
+[ext_resource type="Script" uid="uid://clsm413ayem8e" path="res://GDScripts/pillar.gd" id="1_7id7u"]
+[ext_resource type="Texture2D" uid="uid://cr1mrywa2db85" path="res://Assets/Sprites/Monster.png" id="2_vuetv"]
+[ext_resource type="Texture2D" uid="uid://cdtqs3tsx2sgj" path="res://Assets/Sprites/pausemenu-rays.png" id="3_nushq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ujuxu"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_o16y2"]
 radius = 19.026299
 
 [sub_resource type="Animation" id="Animation_ujuxu"]
@@ -50,21 +50,21 @@ tracks/1/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ks7b"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qmoib"]
 _data = {
 &"RESET": SubResource("Animation_ujuxu"),
 &"pillar_anim": SubResource("Animation_cyu0s")
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bua6k"]
-atlas = ExtResource("2_hyvb2")
+atlas = ExtResource("2_vuetv")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_auidl"]
-atlas = ExtResource("3_hyvb2")
+atlas = ExtResource("3_nushq")
 region = Rect2(576, 324, 288, 162)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_ko0n3"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_bqq8h"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -78,20 +78,25 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Monster" type="StaticBody2D" unique_id=761978888]
-script = ExtResource("1_hyvb2")
+[sub_resource type="CircleShape2D" id="CircleShape2D_4agxs"]
+radius = 16.0
 
-[node name="Monster" type="Area2D" parent="." unique_id=796855384]
+[node name="pillar" type="RigidBody2D" unique_id=623534818]
+script = ExtResource("1_7id7u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster" unique_id=1893756673]
+[node name="Monster" type="Area2D" parent="." unique_id=394713560]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster" unique_id=1032582120]
 rotation = 1.5707964
-shape = SubResource("CircleShape2D_ujuxu")
+shape = SubResource("CircleShape2D_o16y2")
+debug_color = Color(0.9360637, 1.7327071e-05, 0.6358778, 0.41960785)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=169044686]
-libraries/ = SubResource("AnimationLibrary_6ks7b")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=612278931]
+libraries/ = SubResource("AnimationLibrary_qmoib")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=648287394]
-sprite_frames = SubResource("SpriteFrames_ko0n3")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=459476487]
+sprite_frames = SubResource("SpriteFrames_bqq8h")
 animation = &"pillar"
 
-[connection signal="area_entered" from="Monster" to="." method="_on_monster_area_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2024712507]
+shape = SubResource("CircleShape2D_4agxs")

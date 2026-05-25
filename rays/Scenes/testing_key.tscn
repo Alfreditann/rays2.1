@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://barywf5rwlfrj"]
+
+[ext_resource type="PackedScene" uid="uid://bn17f01mf14md" path="res://Scenes/pillar.tscn" id="1_8jusx"]
+[ext_resource type="PackedScene" uid="uid://1p2s8n6ibfjc" path="res://Scenes/Player.tscn" id="2_342lc"]
+[ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/key.tscn" id="3_sgnkn"]
+
+[node name="Node2D" type="Node2D" unique_id=1768367907]
+
+[node name="pillar" parent="." unique_id=623534818 instance=ExtResource("1_8jusx")]
+position = Vector2(318, 119)
+
+[node name="player" parent="." unique_id=123147416 instance=ExtResource("2_342lc")]
+position = Vector2(165, 240)
+
+[node name="key" parent="." unique_id=1384395998 instance=ExtResource("3_sgnkn")]
+position = Vector2(547, 173)
