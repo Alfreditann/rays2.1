@@ -114,7 +114,10 @@ func start_move(dir: Vector2):
 		global_position = target_pos
 		moving = false
 	)
-	
+
+
+
+
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	#if area.name == "PushableArea":
 	pass

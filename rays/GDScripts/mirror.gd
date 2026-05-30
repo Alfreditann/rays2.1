@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var mirror_dir = 1
+@export var mirror_dir = 1
 @onready var Sprite = $Sprite
 
 var player_close = false
@@ -8,7 +8,12 @@ var player_close = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	rotate_mirror()
-	var player = get_node("/root/Map/player")
+
+	var player = get_node_or_null("/root/Map/player")
+	if player == null:
+		print("Player not found in scene tree!")
+		return
+
 	player.interact.connect(_on_interact)
 
 

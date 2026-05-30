@@ -1,23 +1,70 @@
 [gd_scene format=3 uid="uid://dv6iof3jena50"]
 
 [ext_resource type="Script" uid="uid://dtmsxbfu5fkv7" path="res://GDScripts/key.gd" id="1_i3td7"]
-[ext_resource type="Texture2D" uid="uid://dnncvapa3370x" path="res://Assets/Player/Fireball2.webp" id="1_og2wv"]
+[ext_resource type="Texture2D" uid="uid://c818qxk5l0n5y" path="res://Assets/Objects/Pillar deactivator and Pillar.png" id="2_i3td7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3td7"]
 radius = 12.0415945
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_i3td7"]
-atlas = ExtResource("1_og2wv")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmsh4"]
+atlas = ExtResource("2_i3td7")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jc2lb"]
+atlas = ExtResource("2_i3td7")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0md6"]
+atlas = ExtResource("2_i3td7")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqgj8"]
+atlas = ExtResource("2_i3td7")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11gjn"]
+atlas = ExtResource("2_i3td7")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpj34"]
+atlas = ExtResource("2_i3td7")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68in7"]
+atlas = ExtResource("2_i3td7")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vmsh4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_i3td7")
+"texture": SubResource("AtlasTexture_vmsh4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jc2lb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0md6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqgj8")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Pillar deactivator (charged)",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11gjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpj34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68in7")
+}],
+"loop": true,
+"name": &"Pillar deactivator (charging up)",
 "speed": 5.0
 }]
 
@@ -27,10 +74,11 @@ animations = [{
 script = ExtResource("1_i3td7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1341598129]
-position = Vector2(-2, 0)
 shape = SubResource("CircleShape2D_i3td7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1792617725]
+position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_vmsh4")
+animation = &"Pillar deactivator (charging up)"
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]

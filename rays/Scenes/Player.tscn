@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cphtu80xse2nt" path="res://GDScripts/player.gd" id="1_kyqiw"]
 [ext_resource type="Texture2D" uid="uid://cau6m3mrepvux" path="res://Assets/Player/Player Character.png" id="2_gntrk"]
+[ext_resource type="Script" uid="uid://oi0b75vcdge5" path="res://GDScripts/tans_camera.gd" id="3_gntrk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kyqiw"]
 atlas = ExtResource("2_gntrk")
@@ -173,7 +174,7 @@ script = ExtResource("1_kyqiw")
 position = Vector2(0, 1.5)
 scale = Vector2(1, 1.09375)
 sprite_frames = SubResource("SpriteFrames_kyqiw")
-animation = &"Front"
+animation = &"Front_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1830465322]
 position = Vector2(0.5, 0.5)
@@ -203,5 +204,11 @@ collision_mask = 25
 [node name="right" type="RayCast2D" parent="." unique_id=74578726]
 target_position = Vector2(20, 0)
 collision_mask = 25
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=824182785]
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+script = ExtResource("3_gntrk")
 
 [connection signal="area_entered" from="Player_Area" to="." method="_on_area_2d_area_entered"]
