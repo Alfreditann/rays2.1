@@ -56,8 +56,9 @@ func _on_laser_test_area_entered(area: Area2D) -> void:
 
 		last_hit_mirror = mirror
 
-		# 🔥 ADD 3 TILES ON HIT (THIS IS YOUR REQUEST)
 		distance += 3
+
+		#await get_tree().create_timer(0.05).timeout
 
 		var going = Decide_Vel(linear_velocity, mirror)
 

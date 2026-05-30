@@ -111,74 +111,6 @@ region = Rect2(0, 192, 32, 32)
 atlas = ExtResource("3_vuetv")
 region = Rect2(32, 192, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tniww"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(32, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4wnus"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(64, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m72pf"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(96, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tafwr"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(128, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_exfpf"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(160, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c03jw"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(0, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n2i4e"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(32, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3n5bw"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(64, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n125a"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(96, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n2ndd"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(128, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uhveg"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(160, 64, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0vri5"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(0, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i6qu3"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(32, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_brfkb"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(64, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yunjr"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(96, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_br2ih"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(128, 96, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7clq6"]
-atlas = ExtResource("3_vuetv")
-region = Rect2(160, 96, 32, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_bqq8h"]
 animations = [{
 "frames": [{
@@ -227,83 +159,27 @@ animations = [{
 "loop": true,
 "name": &"Pilar decending bottom",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tniww")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4wnus")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m72pf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tafwr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_exfpf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c03jw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n2i4e")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3n5bw")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n125a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n2ndd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uhveg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0vri5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i6qu3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_brfkb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yunjr")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_br2ih")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7clq6")
-}],
-"loop": true,
-"name": &"Pillar decending top",
-"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4agxs"]
 radius = 16.0
 
-[node name="pillar" type="RigidBody2D" unique_id=623534818]
+[node name="pillar" type="StaticBody2D" unique_id=65107725]
 script = ExtResource("1_7id7u")
 
-[node name="Monster" type="Area2D" parent="." unique_id=394713560]
+[node name="Monster" type="Area2D" parent="." unique_id=658677175]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster" unique_id=1032582120]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Monster" unique_id=2135182181]
 rotation = 1.5707964
 shape = SubResource("CircleShape2D_o16y2")
 debug_color = Color(0.9360637, 1.7327071e-05, 0.6358778, 0.41960785)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=612278931]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=431897316]
 libraries/ = SubResource("AnimationLibrary_qmoib")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=459476487]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1413794876]
 sprite_frames = SubResource("SpriteFrames_bqq8h")
 animation = &"Pilar decending bottom"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2024712507]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1905284527]
 shape = SubResource("CircleShape2D_4agxs")
