@@ -2,7 +2,7 @@ extends StaticBody2D
 
 @export var mirror_dir = 1
 @onready var Sprite = $Sprite
-
+@onready var hit_sound = $AudioStreamPlayer2D
 
 func _ready() -> void:
 	rotate_mirror()
@@ -10,3 +10,6 @@ func _ready() -> void:
 
 func rotate_mirror():
 	Sprite.play("rotation_" + str(mirror_dir))
+
+func play_hit_sound():
+	hit_sound.play()
