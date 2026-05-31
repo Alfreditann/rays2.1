@@ -5,12 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bn17f01mf14md" path="res://Scenes/pillar.tscn" id="3_3dejc"]
 [ext_resource type="PackedScene" uid="uid://684nwe2sy53j" path="res://Scenes/pillar_top.tscn" id="4_jgonv"]
 [ext_resource type="PackedScene" uid="uid://dkgpwx16us6ra" path="res://Scenes/mirror.tscn" id="5_iny2r"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/Key.tscn" id="6_iny2r"]
 [ext_resource type="PackedScene" uid="uid://fxaa4p4yco6j" path="res://Scenes/dør_key.tscn" id="7_iqnna"]
-=======
-[ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/key.tscn" id="6_iny2r"]
->>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rd7mt"]
 texture = ExtResource("1_3a301")
@@ -229,9 +225,9 @@ texture_region_size = Vector2i(32, 32)
 6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:5/0 = 0
 8:5/0 = 0
-8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-17.365372, -35.686646, 17.365372, -31.863073, 16, -6.5331707, -16, -6.372612)
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 0.31863022, -16, 0)
 9:5/0 = 0
-9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(8.921661, -31.225813, 50.50296, -37.120483, 55.91971, 45.404877, 7.3285065, 30.588554)
+9:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.63726044, -16, 16, -16, 16, 16, 0.63726044, 16)
 10:5/0 = 0
 10:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -0.63726044, 16, -0.31863022, 16, 16, -16, 16)
 11:5/0 = 0
@@ -261,13 +257,13 @@ texture_region_size = Vector2i(32, 32)
 30:5/0 = 0
 31:5/0 = 0
 0:6/0 = 0
-0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, 12.132309, 16, 11.789337, -11.789337, -16, -11.573914)
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:6/0 = 0
-1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.95589066, -0.31863022, 1.2745209, -16, 16, -16, 16, 16, -16, 16, -16, -0.63726044)
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 2:6/0 = 0
-2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 0, -16, -0.31863022, -0.63726044, 16, -0.63726044, 16, 16, -16, 16)
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:6/0 = 0
-3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -14.02898, -14.118904, -14.388698, -14.658485, 16, -16, 16)
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 4:6/0 = 0
 5:6/0 = 0
 6:6/0 = 0
@@ -1042,17 +1038,10 @@ tile_map_data = PackedByteArray("AAABAP3/AAADAAgAAAABAP7/AAAEAAgAAAD6//7/AAAHAA4
 tile_set = SubResource("TileSet_3dejc")
 
 [node name="pillar" parent="." unique_id=623534818 instance=ExtResource("3_3dejc")]
-<<<<<<< Updated upstream
 position = Vector2(368, 236)
 
 [node name="pillar2" parent="." unique_id=926843397 instance=ExtResource("4_jgonv")]
 position = Vector2(363, 240)
-=======
-position = Vector2(361, 128)
-
-[node name="pillar2" parent="." unique_id=926843397 instance=ExtResource("4_jgonv")]
-position = Vector2(361, 96)
->>>>>>> Stashed changes
 
 [node name="mirror" parent="." unique_id=1535472843 instance=ExtResource("5_iny2r")]
 position = Vector2(424, 250)
@@ -1065,7 +1054,6 @@ position = Vector2(424, 186)
 position = Vector2(200, 250)
 mirror_dir = 6
 
-<<<<<<< Updated upstream
 [node name="StaticBody2D" parent="." unique_id=739130864 instance=ExtResource("6_iny2r")]
 position = Vector2(200, 119)
 
@@ -1117,7 +1105,3 @@ mirror_dir = 9
 
 [node name="mirror14" parent="." unique_id=136770160 instance=ExtResource("5_iny2r")]
 position = Vector2(-151, -132)
-=======
-[node name="key" parent="." unique_id=1384395998 instance=ExtResource("6_iny2r")]
-position = Vector2(204, 149)
->>>>>>> Stashed changes

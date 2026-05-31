@@ -1,86 +1,14 @@
 [gd_scene format=3 uid="uid://dv6iof3jena50"]
 
-<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://dtmsxbfu5fkv7" path="res://GDScripts/key.gd" id="1_i3td7"]
 [ext_resource type="Texture2D" uid="uid://c818qxk5l0n5y" path="res://Assets/Objects/Pillar deactivator and Pillar.png" id="2_i3td7"]
-=======
-[ext_resource type="Script" uid="uid://dtmsxbfu5fkv7" path="res://GDScripts/key.gd" id="1_udxw8"]
-[ext_resource type="Texture2D" uid="uid://c1bjj6qhbpirj" path="res://Assets/Objects/Pillar deactivator and Pillar.png" id="2_udxw8"]
->>>>>>> Stashed changes
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3td7"]
 radius = 12.0415945
 
-<<<<<<< Updated upstream
 [sub_resource type="AtlasTexture" id="AtlasTexture_vmsh4"]
 atlas = ExtResource("2_i3td7")
 region = Rect2(96, 0, 32, 32)
-=======
-[sub_resource type="AtlasTexture" id="AtlasTexture_brn0f"]
-atlas = ExtResource("2_udxw8")
-region = Rect2(0, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_lc1k7"]
-atlas = ExtResource("2_udxw8")
-region = Rect2(32, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_58hov"]
-atlas = ExtResource("2_udxw8")
-region = Rect2(64, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qvjb5"]
-atlas = ExtResource("2_udxw8")
-region = Rect2(96, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_20akx"]
-atlas = ExtResource("2_udxw8")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1fooj"]
-atlas = ExtResource("2_udxw8")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_44ier"]
-atlas = ExtResource("2_udxw8")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_v468b"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_brn0f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lc1k7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_58hov")
-}],
-"loop": false,
-"name": &"key",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qvjb5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_20akx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1fooj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_44ier")
-}],
-"loop": true,
-"name": &"spin",
-"speed": 10.0
-}]
-
-[node name="key" type="StaticBody2D" unique_id=1384395998]
-script = ExtResource("1_udxw8")
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jc2lb"]
 atlas = ExtResource("2_i3td7")
@@ -90,15 +18,9 @@ region = Rect2(128, 0, 32, 32)
 atlas = ExtResource("2_i3td7")
 region = Rect2(160, 0, 32, 32)
 
-<<<<<<< Updated upstream
 [sub_resource type="AtlasTexture" id="AtlasTexture_kqgj8"]
 atlas = ExtResource("2_i3td7")
 region = Rect2(0, 32, 32, 32)
-=======
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1739391057]
-sprite_frames = SubResource("SpriteFrames_v468b")
-animation = &"key"
->>>>>>> Stashed changes
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11gjn"]
 atlas = ExtResource("2_i3td7")
