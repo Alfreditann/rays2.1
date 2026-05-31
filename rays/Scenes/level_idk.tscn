@@ -5,9 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://bn17f01mf14md" path="res://Scenes/pillar.tscn" id="3_3dejc"]
 [ext_resource type="PackedScene" uid="uid://684nwe2sy53j" path="res://Scenes/pillar_top.tscn" id="4_jgonv"]
 [ext_resource type="PackedScene" uid="uid://dkgpwx16us6ra" path="res://Scenes/mirror.tscn" id="5_iny2r"]
-[ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/Key.tscn" id="6_iny2r"]
 [ext_resource type="PackedScene" uid="uid://fxaa4p4yco6j" path="res://Scenes/dør_key.tscn" id="7_iqnna"]
-[ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/key.tscn" id="8_rwckn"]
+[ext_resource type="PackedScene" uid="uid://dokijrcqms5pa" path="res://Scenes/Key.tscn" id="8_rwckn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rd7mt"]
 texture = ExtResource("1_3a301")
@@ -1087,11 +1086,11 @@ mirror_dir = 6
 position = Vector2(232, -134)
 mirror_dir = 8
 
-[node name="StaticBody2D2" parent="." unique_id=112529873 instance=ExtResource("6_iny2r")]
+[node name="StaticBody2D2" parent="." unique_id=112529873 instance=ExtResource("8_rwckn")]
 position = Vector2(683, -235)
 
 [node name="mirror9" parent="." unique_id=938565378 instance=ExtResource("5_iny2r")]
-position = Vector2(455, -40)
+position = Vector2(-810, 566)
 mirror_dir = 8
 
 [node name="StaticBody2D3" parent="." unique_id=1270619460 instance=ExtResource("7_iqnna")]
