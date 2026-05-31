@@ -1,9 +1,11 @@
 extends StaticBody2D
 
+@export var key_id := "key1"
+
 var opened := false
 
 func _process(_delta: float) -> void:
-	if not opened and "key" in Global.keyFounded:
+	if not opened and key_id in Global.keyFounded:
 		opened = true
 		open_pillar()
 

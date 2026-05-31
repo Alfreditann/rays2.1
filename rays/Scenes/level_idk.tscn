@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bn17f01mf14md" path="res://Scenes/pillar.tscn" id="3_3dejc"]
 [ext_resource type="PackedScene" uid="uid://684nwe2sy53j" path="res://Scenes/pillar_top.tscn" id="4_jgonv"]
 [ext_resource type="PackedScene" uid="uid://dkgpwx16us6ra" path="res://Scenes/mirror.tscn" id="5_iny2r"]
-[ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/Key.tscn" id="6_iny2r"]
 [ext_resource type="PackedScene" uid="uid://fxaa4p4yco6j" path="res://Scenes/dør_key.tscn" id="7_iqnna"]
 [ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/key.tscn" id="8_rwckn"]
 [ext_resource type="PackedScene" uid="uid://cb7eej7mg2f2o" path="res://Scenes/mirror_no_rotate.tscn" id="9_wse3w"]
@@ -1031,45 +1030,6 @@ position = Vector2(360, 92)
 [node name="pillar2" parent="." unique_id=926843397 instance=ExtResource("4_jgonv")]
 position = Vector2(360, 60)
 
-[node name="mirror4" parent="." unique_id=1136764774 instance=ExtResource("5_iny2r")]
-position = Vector2(680, -102)
-mirror_dir = 4
-
-[node name="mirror5" parent="." unique_id=1076859184 instance=ExtResource("5_iny2r")]
-position = Vector2(392, -166)
-mirror_dir = 6
-
-[node name="mirror6" parent="." unique_id=942977979 instance=ExtResource("5_iny2r")]
-position = Vector2(393, -230)
-mirror_dir = 2
-
-[node name="mirror7" parent="." unique_id=3147277 instance=ExtResource("5_iny2r")]
-position = Vector2(328, -230)
-mirror_dir = 8
-
-[node name="mirror8" parent="." unique_id=1891080483 instance=ExtResource("5_iny2r")]
-position = Vector2(328, -139)
-mirror_dir = 4
-
-[node name="mirror10" parent="." unique_id=1361664421 instance=ExtResource("5_iny2r")]
-position = Vector2(456, -166)
-mirror_dir = 3
-
-[node name="mirror11" parent="." unique_id=1243153465 instance=ExtResource("5_iny2r")]
-position = Vector2(232, -102)
-mirror_dir = 6
-
-[node name="mirror12" parent="." unique_id=1415224260 instance=ExtResource("5_iny2r")]
-position = Vector2(232, -134)
-mirror_dir = 8
-
-[node name="StaticBody2D2" parent="." unique_id=112529873 instance=ExtResource("6_iny2r")]
-position = Vector2(683, -235)
-
-[node name="mirror9" parent="." unique_id=938565378 instance=ExtResource("5_iny2r")]
-position = Vector2(455, -40)
-mirror_dir = 8
-
 [node name="StaticBody2D3" parent="." unique_id=1270619460 instance=ExtResource("7_iqnna")]
 position = Vector2(-375, -497)
 
@@ -1080,14 +1040,65 @@ mirror_dir = 9
 [node name="mirror14" parent="." unique_id=136770160 instance=ExtResource("5_iny2r")]
 position = Vector2(-151, -132)
 
-[node name="StaticBody2D" parent="." unique_id=739130864 instance=ExtResource("8_rwckn")]
-position = Vector2(200, 122)
-
 [node name="mirror" parent="." unique_id=1535472843 instance=ExtResource("9_wse3w")]
 position = Vector2(423, 185)
 
 [node name="mirror2" parent="." unique_id=106815289 instance=ExtResource("9_wse3w")]
 position = Vector2(425, 249)
+mirror_dir = 4
 
 [node name="mirror3" parent="." unique_id=368874116 instance=ExtResource("9_wse3w")]
 position = Vector2(201, 246)
+mirror_dir = 6
+
+[node name="mirror4" parent="." unique_id=1745662491 instance=ExtResource("9_wse3w")]
+position = Vector2(232, -101)
+mirror_dir = 6
+
+[node name="mirror5" parent="." unique_id=448809096 instance=ExtResource("9_wse3w")]
+position = Vector2(232, -134)
+mirror_dir = 8
+
+[node name="mirror6" parent="." unique_id=1080679668 instance=ExtResource("9_wse3w")]
+position = Vector2(329, -134)
+mirror_dir = 4
+
+[node name="mirror7" parent="." unique_id=2122403494 instance=ExtResource("9_wse3w")]
+position = Vector2(328, -230)
+mirror_dir = 8
+
+[node name="mirror8" parent="." unique_id=25671610 instance=ExtResource("9_wse3w")]
+position = Vector2(392, -231)
+mirror_dir = 2
+
+[node name="mirror9" parent="." unique_id=383113193 instance=ExtResource("9_wse3w")]
+position = Vector2(392, -169)
+mirror_dir = 6
+
+[node name="mirror10" parent="." unique_id=377729876 instance=ExtResource("9_wse3w")]
+position = Vector2(454, -169)
+mirror_dir = 3
+
+[node name="mirror11" parent="." unique_id=1670660812 instance=ExtResource("9_wse3w")]
+position = Vector2(680, -98)
+mirror_dir = 4
+
+[node name="StaticBody2D" parent="." unique_id=739130864 instance=ExtResource("8_rwckn")]
+position = Vector2(201, 120)
+
+[node name="StaticBody2D2" parent="." unique_id=943414561 instance=ExtResource("8_rwckn")]
+position = Vector2(677, -234)
+
+[node name="Area2D" parent="StaticBody2D2" index="0" unique_id=579516122]
+key_id = "key2"
+
+[node name="pillar3" parent="." unique_id=65107725 instance=ExtResource("3_3dejc")]
+position = Vector2(360, -259)
+key_id = "key2"
+
+[node name="pillar4" parent="." unique_id=413906657 instance=ExtResource("4_jgonv")]
+position = Vector2(360, -290)
+key_id = "key2"
+
+[editable path="pillar"]
+[editable path="StaticBody2D2"]
