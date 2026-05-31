@@ -1,71 +1,64 @@
 [gd_scene format=3 uid="uid://dv6iof3jena50"]
 
 [ext_resource type="Script" uid="uid://dtmsxbfu5fkv7" path="res://GDScripts/key.gd" id="1_i3td7"]
-[ext_resource type="Texture2D" uid="uid://c818qxk5l0n5y" path="res://Assets/Objects/Pillar deactivator and Pillar.png" id="2_i3td7"]
+[ext_resource type="Texture2D" uid="uid://c1bjj6qhbpirj" path="res://Assets/Objects/Pillar deactivator and Pillar.png" id="2_i3td7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i3td7"]
-radius = 12.0415945
+radius = 25.019993
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vmsh4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_udxw8"]
 atlas = ExtResource("2_i3td7")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jc2lb"]
-atlas = ExtResource("2_i3td7")
-region = Rect2(128, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a0md6"]
-atlas = ExtResource("2_i3td7")
-region = Rect2(160, 0, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kqgj8"]
-atlas = ExtResource("2_i3td7")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_11gjn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_brn0f"]
 atlas = ExtResource("2_i3td7")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tpj34"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lc1k7"]
 atlas = ExtResource("2_i3td7")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_68in7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_58hov"]
 atlas = ExtResource("2_i3td7")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvjb5"]
+atlas = ExtResource("2_i3td7")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20akx"]
+atlas = ExtResource("2_i3td7")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vmsh4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vmsh4")
+"texture": SubResource("AtlasTexture_udxw8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jc2lb")
+"texture": SubResource("AtlasTexture_brn0f")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a0md6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_kqgj8")
+"texture": SubResource("AtlasTexture_lc1k7")
 }],
-"loop": true,
-"name": &"Pillar deactivator (charged)",
+"loop": false,
+"name": &"key",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_11gjn")
+"texture": SubResource("AtlasTexture_58hov")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tpj34")
+"texture": SubResource("AtlasTexture_qvjb5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_68in7")
+"texture": SubResource("AtlasTexture_20akx")
 }],
 "loop": true,
-"name": &"Pillar deactivator (charging up)",
-"speed": 5.0
+"name": &"spin",
+"speed": 10.0
 }]
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=739130864]
@@ -79,6 +72,6 @@ shape = SubResource("CircleShape2D_i3td7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1792617725]
 position = Vector2(0, -3)
 sprite_frames = SubResource("SpriteFrames_vmsh4")
-animation = &"Pillar deactivator (charging up)"
+animation = &"key"
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]

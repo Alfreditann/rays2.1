@@ -9,7 +9,7 @@ var player_close = false
 func _ready() -> void:
 	rotate_mirror()
 
-	var player = get_node_or_null("/root/Map/player")
+	var player = get_node_or_null("/root/Node2D/player")
 	if player == null:
 		print("Player not found in scene tree!")
 		return

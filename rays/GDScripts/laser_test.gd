@@ -1,44 +1,36 @@
 extends RigidBody2D
 
 var speed := 200
-var last_hit_time := 0.0
-var hit_delay := 0.2
-var rect_shape1 = 0
-var dir := Vector2.ZERO
+var dir := Vector2.LEFT
 var last_hit_mirror: Node = null
 
+var is_hitting := false
+
 const TILE_SIZE := 32
-
-var distance := 3 # number of tiles remaining
-
+var distance := 3
 var tile_progress := 0.0
 
-@onready var anim = $AnimatedSprite2D
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 
 func _ready():
 	add_to_group("laser")
 
-	anim.play("Middle")
-
-	gravity_scale = 0
 	lock_rotation = true
 	angular_velocity = 0
-	sleeping = false
+	gravity_scale = 0
 
-	linear_velocity = Vector2.LEFT.rotated(rotation) * speed
+	linear_velocity = dir.normalized() * speed
 
-	if dir != Vector2.ZERO:
-		linear_velocity = dir.normalized() * speed
-		rotation = dir.angle()
+	anim.animation_finished.connect(_on_anim_finished)
+
+	update_anim()
 
 
 func _physics_process(delta):
-	# accumulate movement
 	var move_amount = speed * delta
 	tile_progress += move_amount
 
-	# convert pixels → tiles
 	while tile_progress >= TILE_SIZE:
 		tile_progress -= TILE_SIZE
 		distance -= 1
@@ -55,29 +47,26 @@ func _on_laser_test_area_entered(area: Area2D) -> void:
 			return
 
 		last_hit_mirror = mirror
-
 		distance += 3
-
-		#await get_tree().create_timer(0.05).timeout
 
 		var going = Decide_Vel(linear_velocity, mirror)
 
-		if going != null:
-			dir = going
-			call_deferred("_apply_bounce", going)
-		else:
+		if going == null:
 			queue_free()
+			return
 
-	if area.name == "hurtbox":
-		queue_free()
+		play_hit_anim_from_dir(going)
 
-	if area.name == "monster":
+		dir = going
+		_apply_bounce(going)
+
+	if area.name in ["hurtbox", "monster"]:
 		queue_free()
 
 
 func _apply_bounce(going: Vector2) -> void:
 	linear_velocity = going.normalized() * speed
-	rotation = going.angle()
+	update_anim()
 
 
 func Decide_Vel(Current_Vel, mirror):
@@ -124,3 +113,47 @@ func Decide_Vel(Current_Vel, mirror):
 			queue_free()
 
 	return null
+
+
+func update_anim():
+	if is_hitting:
+		return
+
+	var v = linear_velocity.normalized()
+
+	if abs(v.x) > abs(v.y):
+		if v.x > 0:
+			anim.play("right")
+		else:
+			anim.play("left")
+	else:
+		if v.y > 0:
+			anim.play("down")
+		else:
+			anim.play("up")
+
+
+func play_hit_anim_from_dir(v: Vector2):
+	if v == Vector2.ZERO:
+		return
+
+	is_hitting = true
+
+	v = v.normalized()
+
+	if abs(v.x) > abs(v.y):
+		if v.x > 0:
+			anim.play("hit_right")
+		else:
+			anim.play("hit_left")
+	else:
+		if v.y > 0:
+			anim.play("hit_down")
+		else:
+			anim.play("hit_up")
+
+
+func _on_anim_finished():
+	if anim.animation.begins_with("hit"):
+		is_hitting = false
+		update_anim()
