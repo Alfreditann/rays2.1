@@ -10,7 +10,7 @@ func _process(_delta: float) -> void:
 func open_pillar() -> void:
 	print("Opening pillar")
 
-	$AnimatedSprite2D.play("Pilar decending bottom")
+	$AnimatedSprite2D.play("Pillar decending top")
 
 	await $AnimatedSprite2D.animation_finished
 
