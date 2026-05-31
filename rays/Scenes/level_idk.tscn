@@ -1012,6 +1012,29 @@ size = Vector2(127, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gwml8"]
 size = Vector2(67, 131)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfc8g"]
+size = Vector2(268.5, 157)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rnsux"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yj7j"]
+size = Vector2(349, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6hse1"]
+size = Vector2(258, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2evxy"]
+size = Vector2(227, 164)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0dmnj"]
+size = Vector2(37, 95)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j37j7"]
+size = Vector2(91, 63)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vlmt"]
+size = Vector2(61, 64)
+
 [node name="Node2D" type="Node2D" unique_id=1825351967]
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1844737240]
@@ -1144,6 +1167,52 @@ shape = SubResource("RectangleShape2D_ii2i2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7" unique_id=961677417]
 position = Vector2(57.5, -180.5)
 shape = SubResource("RectangleShape2D_gwml8")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="." unique_id=229446353]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8" unique_id=1786306940]
+position = Vector2(511.25, 58)
+shape = SubResource("RectangleShape2D_qfc8g")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="." unique_id=1125359107]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9" unique_id=496603931]
+position = Vector2(433, 173)
+shape = SubResource("RectangleShape2D_rnsux")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="." unique_id=289681208]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10" unique_id=1500788297]
+position = Vector2(-534.5, -88)
+shape = SubResource("RectangleShape2D_8yj7j")
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="." unique_id=1914418797]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11" unique_id=1409000361]
+position = Vector2(-586, -233)
+shape = SubResource("RectangleShape2D_6hse1")
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="." unique_id=498334455]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12" unique_id=1428297180]
+position = Vector2(-153.5, -231)
+shape = SubResource("RectangleShape2D_2evxy")
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="." unique_id=1145620563]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13" unique_id=895101995]
+position = Vector2(-246.5, -102.5)
+shape = SubResource("RectangleShape2D_0dmnj")
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="." unique_id=1212595352]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14" unique_id=1618481417]
+position = Vector2(-312.5, -278.5)
+shape = SubResource("RectangleShape2D_j37j7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D14" unique_id=2048502631]
+position = Vector2(-425.5, -280)
+shape = SubResource("RectangleShape2D_8vlmt")
 
 [editable path="pillar"]
 [editable path="StaticBody2D2"]
