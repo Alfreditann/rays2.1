@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://684nwe2sy53j" path="res://Scenes/pillar_top.tscn" id="4_jgonv"]
 [ext_resource type="PackedScene" uid="uid://dkgpwx16us6ra" path="res://Scenes/mirror.tscn" id="5_iny2r"]
 [ext_resource type="PackedScene" uid="uid://fxaa4p4yco6j" path="res://Scenes/dør_key.tscn" id="7_iqnna"]
-[ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/key.tscn" id="8_rwckn"]
+[ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/Key.tscn" id="8_rwckn"]
 [ext_resource type="PackedScene" uid="uid://cb7eej7mg2f2o" path="res://Scenes/mirror_no_rotate.tscn" id="9_wse3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rd7mt"]
@@ -1073,27 +1073,27 @@ position = Vector2(201, 246)
 mirror_dir = 6
 
 [node name="mirror15" parent="." unique_id=1745662491 instance=ExtResource("9_wse3w")]
-position = Vector2(232, -104)
+position = Vector2(232, -102)
 mirror_dir = 6
 
 [node name="mirror16" parent="." unique_id=448809096 instance=ExtResource("9_wse3w")]
-position = Vector2(232, -135)
+position = Vector2(232, -134)
 mirror_dir = 8
 
 [node name="mirror17" parent="." unique_id=1080679668 instance=ExtResource("9_wse3w")]
-position = Vector2(329, -135)
+position = Vector2(328, -134)
 mirror_dir = 4
 
 [node name="mirror18" parent="." unique_id=2122403494 instance=ExtResource("9_wse3w")]
-position = Vector2(331, -231)
+position = Vector2(328, -230)
 mirror_dir = 8
 
 [node name="mirror19" parent="." unique_id=25671610 instance=ExtResource("9_wse3w")]
-position = Vector2(393, -230)
+position = Vector2(392, -230)
 mirror_dir = 2
 
 [node name="mirror20" parent="." unique_id=383113193 instance=ExtResource("9_wse3w")]
-position = Vector2(393, -166)
+position = Vector2(392, -166)
 mirror_dir = 6
 
 [node name="mirror21" parent="." unique_id=377729876 instance=ExtResource("9_wse3w")]
