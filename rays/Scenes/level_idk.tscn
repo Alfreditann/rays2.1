@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://684nwe2sy53j" path="res://Scenes/pillar_top.tscn" id="4_jgonv"]
 [ext_resource type="PackedScene" uid="uid://dkgpwx16us6ra" path="res://Scenes/mirror.tscn" id="5_iny2r"]
 [ext_resource type="PackedScene" uid="uid://fxaa4p4yco6j" path="res://Scenes/dør_key.tscn" id="7_iqnna"]
-[ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/key.tscn" id="8_rwckn"]
+[ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/Key.tscn" id="8_rwckn"]
 [ext_resource type="Texture2D" uid="uid://c7ltvq8lhmokb" path="res://Assets/Sprites/B76PQ8ByOdUiAAAAAElFTkSuQmCC.png" id="9_frb5m"]
 [ext_resource type="PackedScene" uid="uid://cb7eej7mg2f2o" path="res://Scenes/mirror_no_rotate.tscn" id="9_wse3w"]
 
@@ -1072,7 +1072,7 @@ position = Vector2(683, -235)
 key_id = "key2"
 
 [node name="mirror9" parent="." unique_id=938565378 instance=ExtResource("5_iny2r")]
-position = Vector2(-186, -134)
+position = Vector2(-184, -134)
 mirror_dir = 8
 
 [node name="StaticBody2D3" parent="." unique_id=1270619460 instance=ExtResource("7_iqnna")]
@@ -1083,7 +1083,7 @@ position = Vector2(-702, 554)
 mirror_dir = 9
 
 [node name="mirror14" parent="." unique_id=136770160 instance=ExtResource("5_iny2r")]
-position = Vector2(-89, -134)
+position = Vector2(-87, -134)
 
 [node name="mirror" parent="." unique_id=1535472843 instance=ExtResource("9_wse3w")]
 position = Vector2(423, 185)
@@ -1228,6 +1228,18 @@ position = Vector2(-120, -67)
 
 [node name="Area2D" parent="StaticBody2D15" index="0" unique_id=579516122]
 key_id = "key3"
+
+[node name="CollisionShape2D" parent="StaticBody2D15/Area2D" index="0" unique_id=1341598129]
+position = Vector2(-255, 28)
+
+[node name="AnimatedSprite2D" parent="StaticBody2D15" index="1" unique_id=1792617725]
+position = Vector2(-256, 28)
+
+[node name="mirror" parent="StaticBody2D15" unique_id=1761635578 instance=ExtResource("5_iny2r")]
+position = Vector2(-63, 29)
+
+[node name="mirror2" parent="StaticBody2D15" unique_id=1267495963 instance=ExtResource("5_iny2r")]
+position = Vector2(33, 29)
 
 [node name="B76pq8ByOdUiAaaaaElFTkSuQmCc" type="Sprite2D" parent="." unique_id=1933162340]
 position = Vector2(-364, -531.00006)
