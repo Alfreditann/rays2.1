@@ -6,6 +6,8 @@ var last_hit_mirror: Node = null
 
 var is_hitting := false
 
+
+
 const TILE_SIZE := 32
 var distance := 3
 var tile_progress := 0.0
@@ -42,6 +44,8 @@ func _physics_process(delta):
 func _on_laser_test_area_entered(area: Area2D) -> void:
 	if area.name == "speil_hitbox":
 		var mirror = area.get_parent()
+		
+		mirror.play_hit_sound()
 
 		if mirror == last_hit_mirror:
 			return

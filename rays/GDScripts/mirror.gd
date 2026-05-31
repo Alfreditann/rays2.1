@@ -2,8 +2,12 @@ extends StaticBody2D
 
 @export var mirror_dir = 1
 @onready var Sprite = $Sprite
+@onready var hit_sound = $AudioStreamPlayer2D
 
 var player_close = false
+
+func _play_hit_sound():
+	hit_sound.play()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
