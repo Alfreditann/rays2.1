@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://684nwe2sy53j" path="res://Scenes/pillar_top.tscn" id="4_jgonv"]
 [ext_resource type="PackedScene" uid="uid://dkgpwx16us6ra" path="res://Scenes/mirror.tscn" id="5_iny2r"]
 [ext_resource type="PackedScene" uid="uid://fxaa4p4yco6j" path="res://Scenes/dør_key.tscn" id="7_iqnna"]
-[ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/Key.tscn" id="8_rwckn"]
+[ext_resource type="PackedScene" uid="uid://dv6iof3jena50" path="res://Scenes/key.tscn" id="8_rwckn"]
 [ext_resource type="PackedScene" uid="uid://cb7eej7mg2f2o" path="res://Scenes/mirror_no_rotate.tscn" id="9_wse3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rd7mt"]
@@ -1214,5 +1214,20 @@ shape = SubResource("RectangleShape2D_j37j7")
 position = Vector2(-425.5, -280)
 shape = SubResource("RectangleShape2D_8vlmt")
 
+[node name="pillar5" parent="." unique_id=623456266 instance=ExtResource("3_3dejc")]
+position = Vector2(-178, -57)
+key_id = "key3"
+
+[node name="pillar6" parent="." unique_id=214407434 instance=ExtResource("4_jgonv")]
+position = Vector2(-179, -88)
+key_id = "key3"
+
+[node name="StaticBody2D15" parent="." unique_id=975357616 instance=ExtResource("8_rwckn")]
+position = Vector2(-120, -67)
+
+[node name="Area2D" parent="StaticBody2D15" index="0" unique_id=579516122]
+key_id = "key3"
+
 [editable path="pillar"]
 [editable path="StaticBody2D2"]
+[editable path="StaticBody2D15"]
